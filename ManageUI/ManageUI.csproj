@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{675E3818-7AC0-4F91-BA6B-2211243647DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManageUI</RootNamespace>
+    <AssemblyName>ManageUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\--mods-reset.css,mods-common.less.css" />
+    <Content Include="CSS\global-min.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="DianYingYuanTianJiaFrm.aspx" />
+    <Content Include="image\03.jpg" />
+    <Content Include="image\04.jpg" />
+    <Content Include="image\05.jpg" />
+    <Content Include="image\9f9fd69dd18c06cb8041935eebf1b3b5.jpg" />
+    <Content Include="image\bg-right-status.png" />
+    <Content Include="image\bg-wrong-status.png" />
+    <Content Include="image\bg.jpg" />
+    <Content Include="image\bo.png" />
+    <Content Include="image\defaultImage.gif" />
+    <Content Include="image\fh.png" />
+    <Content Include="image\icon-slash.png" />
+    <Content Include="image\icon.png" />
+    <Content Include="image\login-bg-8.jpg" />
+    <Content Include="image\play.png" />
+    <Content Include="image\playing.png" />
+    <Content Include="image\TB163BlJVXXXXXMXFXXXXXXXXXX-366-119.png" />
+    <Content Include="image\TB16548LFXXXXX5XXXXXXXXXXXX-1920-600.jpg_q90.jpg" />
+    <Content Include="image\TB18vdBLFXXXXakaXXXXXXXXXXX-1920-523.jpg_q90.jpg" />
+    <Content Include="image\TB1jMJBKXXXXXc8XpXX3YKG2pXX-294-542_png_q90.png" />
+    <Content Include="image\TB1Ng8sLFXXXXbqaXXXXXXXXXXX-13-20.png" />
+    <Content Include="image\TB1oidOLFXXXXXxXFXXXXXXXXXX-1920-600.jpg_q90.jpg" />
+    <Content Include="image\TB1Q4NNKXXXXXXeXpXXdtacIVXX-125-173_jpeg_q90.jpg" />
+    <Content Include="image\TB1rp8sKXXXXXaCXVXXT9LD0pXX-425-508_jpg_q90.jpg" />
+    <Content Include="image\TB1Wi4wKXXXXXbbXFXXhXuS_FXX-124-173_jpeg_q90.jpg" />
+    <Content Include="image\TB1wOtXJVXXXXXQXVXXXXXXXXXX-231-229.jpg_q90.jpg" />
+    <Content Include="image\TB1ZSxOKXXXXXcqXXXXjupPJXXX-463-519_jpg_q90.jpg" />
+    <Content Include="image\TB1_JFEKXXXXXcOXpXXG0K97pXX-124-173_jpg_q90.jpg" />
+    <Content Include="image\zhan.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="JS\--kissy-k-1.4.2-seed-min.js,tb-global-3.5.8-global-min.js" />
+    <Content Include="CSS\--life-pc-movie-1.0.24-pages-header-index.less.css" />
+    <Content Include="JS\--mods-config.js" />
+    <Content Include="JS\--seajs-seajs-2.2.3-sea.js,seajs-seajs-combo-1.0.0-seajs-combo.js,seajs-seajs-style-1.0.2-seajs-style.js,seajs-seajs-log-1.0.0-seajs-log.js,jquery-jquery-1.7.2-jquery.js,gallery-json-1.0.3-json.js" />
+    <Content Include="login.aspx" />
+    <Content Include="ManageFrm.aspx" />
+    <Content Include="MianFrm.aspx" />
+    <Content Include="resources\css\invalid.css" />
+    <Content Include="resources\css\reset.css" />
+    <Content Include="resources\css\style.css" />
+    <Content Include="resources\images\b.png" />
+    <Content Include="resources\images\bg-body.gif" />
+    <Content Include="resources\images\bg-button-green.gif" />
+    <Content Include="resources\images\bg-content-box.gif" />
+    <Content Include="resources\images\bg-form-field.gif" />
+    <Content Include="resources\images\bg-login-top.png" />
+    <Content Include="resources\images\bg-login.gif" />
+    <Content Include="resources\images\bg-menu-item-current.gif" />
+    <Content Include="resources\images\bg-menu-item-green.gif" />
+    <Content Include="resources\images\bg-radial-gradient.gif" />
+    <Content Include="resources\images\bg-sidebar.gif" />
+    <Content Include="resources\images\bl.png" />
+    <Content Include="resources\images\br.png" />
+    <Content Include="resources\images\icons\bullet_black.png" />
+    <Content Include="resources\images\icons\clock_48.png" />
+    <Content Include="resources\images\icons\comment_48.png" />
+    <Content Include="resources\images\icons\cross.png" />
+    <Content Include="resources\images\icons\cross_circle.png" />
+    <Content Include="resources\images\icons\cross_grey_small.png" />
+    <Content Include="resources\images\icons\exclamation.png" />
+    <Content Include="resources\images\icons\hammer_screwdriver.png" />
+    <Content Include="resources\images\icons\image_add_48.png" />
+    <Content Include="resources\images\icons\information.png" />
+    <Content Include="resources\images\icons\jquery.wysiwyg.gif" />
+    <Content Include="resources\images\icons\paper_content_pencil_48.png" />
+    <Content Include="resources\images\icons\pencil.png" />
+    <Content Include="resources\images\icons\pencil_48.png" />
+    <Content Include="resources\images\icons\tick_circle.png" />
+    <Content Include="resources\images\menu-current-arrow.gif" />
+    <Content Include="resources\images\shortcut-button-bg.gif" />
+    <Content Include="resources\images\tl.png" />
+    <Content Include="resources\images\tr.png" />
+    <Content Include="resources\images\logo.png" />
+    <Content Include="resources\scripts\--kissy-k-1.4.2-seed-min.js,tb-global-3.5.8-global-min.js" />
+    <Content Include="resources\scripts\facebox.js" />
+    <Content Include="resources\scripts\jquery-1.3.2.min.js" />
+    <Content Include="resources\scripts\jquery.date.js" />
+    <Content Include="resources\scripts\jquery.datePicker.js" />
+    <Content Include="resources\scripts\jquery.wysiwyg.js" />
+    <Content Include="resources\scripts\simpla.jquery.configuration.js" />
+    <Content Include="Web.config" />
+    <Content Include="main.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DianYingYuanTianJiaFrm.aspx.cs">
+      <DependentUpon>DianYingYuanTianJiaFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DianYingYuanTianJiaFrm.aspx.designer.cs">
+      <DependentUpon>DianYingYuanTianJiaFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageFrm.aspx.cs">
+      <DependentUpon>ManageFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageFrm.aspx.designer.cs">
+      <DependentUpon>ManageFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MianFrm.aspx.cs">
+      <DependentUpon>MianFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MianFrm.aspx.designer.cs">
+      <DependentUpon>MianFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{2e710400-1eee-4bed-8fd0-ba974159c613}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{4ac43019-0370-4328-9c58-cf7ba4b09d3c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{56d2db5c-faa8-421a-a675-ad428c4394de}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{4794d14e-a946-411e-9eee-e84ff1908d6c}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5398</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5398/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

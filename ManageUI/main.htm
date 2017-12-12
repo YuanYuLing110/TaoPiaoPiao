@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9 ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta />
+<title>淘票票管理主页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<link rel="stylesheet" href="CSS/global-min.css" tppabs="https://g.alicdn.com/tb/global/3.5.5/global-min.css">
+<link rel="shortcut icon" href="//img.alicdn.com/tps/i1/TB1.aEgGFXXXXamXpXXnCBGGXXX-32-32.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="CSS/--mods-reset.css,mods-common.less.css" tppabs="https://g.alicdn.com/life/pc-movie/1.0.16/??mods/reset.css,mods/common.less.css" clam-moveto="none">
+<script src="JS/--kissy-k-1.4.2-seed-min.js,tb-global-3.5.8-global-min.js" tppabs="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.5.8/global-min.js" clam-moveto="none"></script>
+<script src="JS/--mods-config.js" tppabs="https://g.alicdn.com/life/pc-movie/1.0.16/??mods/config.js" clam-moveto="none"></script>
+<script clam-moveto="none">
+	;(function (S) {
+		var tag = Math.floor((+new Date() + 432E5) / 864E5),
+		host = 'https://g.alicdn.com//'; 
+		//host =  '//g.alicdn.com/' ;
+		S.Config.combine = false; //Boolean('1');
+		S.config({
+			packages: [{
+					name: "pcm",
+					path: host + "life/pc-movie/1.0.18/",
+					ignorePackageNameInUri : true,
+					//tag:new Date().getTime(), // tag
+					debug : true
+				},
+				{
+	                name:"datalazyload",
+	                base:'//g.alicdn.com/kg/datalazyload/2.0.0/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"fkbc",
+	                base:'//g.alicdn.com/tbc/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"kg",
+	                path:"//g.alicdn.com/kg/",
+	                debug:true,
+	                ignorePackageNameInUri:true
+	            },
+	            {
+	                name:"mobile",
+	                base:'//assets.alicdn.com/s/kissy/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"mvc",
+	                base:'//g.alicdn.com/kissy/k/1.3.2/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"tbc",
+	                base:'//g.alicdn.com/tbc/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"tbc/mtop",
+	                base:'//g.alicdn.com/tbc/mtop/0.1.8/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"template",
+	                base:'//g.alicdn.com/kissy/k/1.3.2/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name:"gallery",
+	                base:'//assets.alicdn.com/s/kissy/gallery/',
+	                ignorePackageNameInUri: true
+	            },
+	            {
+	                name: "ub",
+	                path: "//g.alicdn.com/ju/ub/1.0.2/",
+	                ignorePackageNameInUri : true
+	            }
+			]
+		});
+	})(KISSY);
+if(window.lib&&window.lib.mtop){var host=location.href;var env="m";if(/wapa/.test(host)){env='wapa'}else if(/waptest/.test(host)){env='waptest'}window.env=window.lib.mtop.config.subDomain=env}
+</script>
+<script type="text/javascript" src="JS/--seajs-seajs-2.2.3-sea.js,seajs-seajs-combo-1.0.0-seajs-combo.js,seajs-seajs-style-1.0.2-seajs-style.js,seajs-seajs-log-1.0.0-seajs-log.js,jquery-jquery-1.7.2-jquery.js,gallery-json-1.0.3-json.js" tppabs="https://a.alipayobjects.com/??seajs/seajs/2.2.3/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-style/1.0.2/seajs-style.js,seajs/seajs-log/1.0.0/seajs-log.js,jquery/jquery/1.7.2/jquery.js,gallery/json/1.0.3/json.js"></script>
+<script>
+    seajs.config({
+      alias: {
+        '$': 'jquery/jquery/1.7.2/jquery',
+        '$-debug': 'jquery/jquery/1.7.2/jquery',
+        'jquery': 'jquery/jquery/1.7.2/jquery',
+        'jquery-debug': 'jquery/jquery/1.7.2/jquery-debug',
+        'seajs-debug': 'seajs/seajs-debug/1.1.1/seajs-debug'
+      }
+    });
+    window.$ = window.$ || window.jQuery;
+  </script>
+<link rel="stylesheet" href="CSS/--life-pc-movie-1.0.24-pages-header-index.less.css" tppabs="https://g.alicdn.com/??life/pc-movie/1.0.24/pages/header/index.less.css">
+<script>
+  var isAP, isTB, isDY, isDY5, isDY4, ua = window.navigator.userAgent;
+  if (ua.match(/AliApp/i)) {
+    isAP = ua.match(/AlipayClient/i) && ua.match(/AP/);
+    isTB = ua.match(/WindVane/i) && ua.match(/TB/);
+    isDY4 = ua.match(/WindVane/i) && ua.match(/DY/);
+    isDY5 = ua.match(/TBMovie/i) && ua.match(/DY/);
+    isDY = isDY5 || isDY4 && !ua.match(/android/i);
+  }
+  var isWB = ua.match(/weibo/i), isYK, isTD;
+  isWB = 1*'0';
+  isYK = 1*'0';
+  isTD = 1*'0';
+</script>
+<script>
+// Production steps of ECMA-262, Edition 5, 15.4.4.18
+// Reference: http://es5.github.io/#x15.4.4.18
+if (!Array.prototype.forEach) {
+  Array.prototype.forEach = function(callback, thisArg) {
+    var T, k;
+    if (this == null) {
+      throw new TypeError(' this is null or not defined');
+    }
+    // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
+    var O = Object(this);
+    // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
+    // 3. Let len be ToUint32(lenValue).
+    var len = O.length >>> 0;
+    // 4. If IsCallable(callback) is false, throw a TypeError exception.
+    // See: http://es5.github.com/#x9.11
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + ' is not a function');
+    }
+    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
+    if (arguments.length > 1) {
+      T = thisArg;
+    }
+    // 6. Let k be 0
+    k = 0;
+    // 7. Repeat, while k < len
+    while (k < len) {
+      var kValue;
+      // a. Let Pk be ToString(k).
+      //   This is implicit for LHS operands of the in operator
+      // b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
+      //   This step can be combined with c
+      // c. If kPresent is true, then
+      if (k in O) {
+        // i. Let kValue be the result of calling the Get internal method of O with argument Pk.
+        kValue = O[k];
+        // ii. Call the Call internal method of callback with T as the this value and
+        // argument list containing kValue, k, and O.
+        callback.call(T, kValue, k, O);
+      }
+      // d. Increase k by 1.
+      k++;
+    }
+    // 8. return undefined
+  };
+}
+</script>
+    <link href="CSS/main.css" rel="stylesheet" />
+</head>
+<body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&asid=AQAAAADqeC5aDrhheAAAAACVQ8wFsEhd3g==&sidx=VBWT0EGCj8ttBD+hit1/UVXLB8QnJcfwhC5JQjSlbYXWhWWPLsHonHlq77vSSpGyKbU+NDdu0I2rmMgYfeKZs3lePM6MGoVa0dCeVESTk5ePnPtMG+Ftm7xuAU0dOB/RfxGJy2uwedXyV+5wtgdVECeL5nkONkHOI2B7bug3aQ0=",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script><div id="J_SiteNav" class="site-nav">
+<div id="J_SiteNavBd" class="site-nav-bd">
+<ul id="J_SiteNavBdL" class="site-nav-bd-l"></ul>
+<ul id="J_SiteNavBdR" class="site-nav-bd-r"></ul>
+</div>
+</div>
+<script>TB.Global.blacklist = ['fn-cart'];TB.Global.init();</script>
+
+<script>
+KISSY.use("pcm/pages/header/index",function(S,InitCity){
+		new InitCity()._setHighLight("index");
+	})
+</script>
+<script type="text/javascript">
+    KISSY.use("dom, node, event,gallery/datalazyload/1.0/,ajax", function(S,Dom,Node,Event,DataLazyload,IO){
+        new KISSY.DataLazyload({diff:200});//data-ks-lazyload
+    });
+</script>
+<script>
+    (function(b){
+        var a={};a.Html=b.getElementsByTagName("html")[0];
+        a.widthProportion=function(){
+            var c=(b.body&&b.body.clientWidth||a.Html.offsetWidth)/750;
+            return c>1?1:c<0.4?0.4:c;};a.changePage=function(){
+            a.Html.setAttribute("style","font-size:"+a.widthProportion()*100+"px !important; height: auto");
+        };a.changePage();setInterval(a.changePage,100)})(document);
+</script>
+<div class="dbox" data-spm="2098579">
+<div class="wzt-banner">
+<div class="wzt-main">
+<img src="image/TB1wOtXJVXXXXXQXVXXXXXXXXXX-231-229.jpg_q90.jpg" tppabs="https://gw.alicdn.com/tps/TB1wOtXJVXXXXXQXVXXXXXXXXXX-231-229.jpg_q90.jpg" width="100"  class="ewm" alt=""/>
+<img src="image/TB163BlJVXXXXXMXFXXXXXXXXXX-366-119.png" width="350" tppabs="https://gw.alicdn.com/tps/TB163BlJVXXXXXMXFXXXXXXXXXX-366-119.png" class="tbdy" alt=""/>
+<ul class="tb-ul">
+<li>在线选座轻松购票</li>
+<li>精彩影讯随时掌握</li>
+<li>优惠活动全年不停</li>
+</ul>
+</div>
+</div>
+<div class="banner2">
+<div class="wzt-main">
+<img src="image/TB1jMJBKXXXXXc8XpXX3YKG2pXX-294-542_png_q90.png" width="200" height="350" class="pic_240 lazyload" alt=""/>
+<div class="wzt-text">
+<p class="wzt-title">在线选座 轻松购票</p>
+<ul>
+<li>全国最大售票平台 支持5000家影院</li>
+<li>简单方便快捷 提前选好座位不排队</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="wzt-banner2">
+<div class="wzt-main">
+<img src="image/TB1rp8sKXXXXXaCXVXXT9LD0pXX-425-508_jpg_q90.jpg" width="300" height="400" class="lazyload pic425" style="position:relative;top:0;right:0" alt=""/>
+<div class="wzt-text2">
+<p class="wzt-title">精彩影讯 随时掌握</p>
+<ul>
+<li>最新热映电影资讯 预告片 海报 剧照 明星影评话题不断</li>
+</ul>
+<div class="img-box">
+<img src="image/TB1Q4NNKXXXXXXeXpXXdtacIVXX-125-173_jpeg_q90.jpg" width="125" height="173" class="lazyload boximg" alt=""/>
+<img src="image/TB1_JFEKXXXXXcOXpXXG0K97pXX-124-173_jpg_q90.jpg" width="125" height="173" class="lazyload boximg" alt=""/>
+<img  src="image/TB1Wi4wKXXXXXbbXFXXhXuS_FXX-124-173_jpeg_q90.jpg" width="125" height="173" class="lazyload boximg" alt=""/>
+</div>
+</div>
+</div>
+</div>
+<div class="banner3">
+<div class="wzt-main">
+    <img src="image/TB1ZSxOKXXXXXcqXXXXjupPJXXX-463-519_jpg_q90.jpg" width="300" height="400" class="pic_463 lazyload" alt="" />
+<div class="wzt-text">
+<p class="wzt-title">优惠活动 全年不停</p>
+<ul>
+<ul>
+<li>全年有优惠 会员有特权</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="--life-pc-movie-1.0.16-pages-footer-index.css" tppabs="https://g.alicdn.com/??life/pc-movie/1.0.16/pages/footer/index.css">
+<style>
+  .footer {font-size: 12px;}
+</style>
+
+<script type="text/javascript">(function(e){if(!e["_med"])e["_med"]={};var t=e["_med"];t.cookie=function(e,t,a){if(t!==undefined){a=a||{};if(typeof a.expires==="number"){var o=a.expires,l=a.expires=new Date;l.setTime(+l+o*864e5)}return document.cookie=[e,"=",String(t),a.expires?"; expires="+a.expires.toUTCString():"",a.path?"; path="+a.path:"",a.domain?"; domain="+a.domain:"",a.secure?"; secure":""].join("")}var r=e?undefined:{};var i=document.cookie?document.cookie.split("; "):[];for(var n=0,s=i.length;n<s;n++){var b=i[n].split("=");var d=b.shift();var p=b.join("=");if(e&&e===d){r=p;break}if(!e&&p!==undefined){r[d]=p}}return r};var a=document;var o=e.devicePixelRatio||1,l=a.documentElement.clientWidth,r=a.documentElement.clientHeight,i,n,s,b=/initial-scale=([\d\.]+?),/i,d,p;if(a.querySelector){p=a.querySelector('meta[name="viewport"]');if(p){d=b.exec(p.content+",");if(d){s=parseFloat(d[1],10)}}}if(s){l=l*s;r=r*s}if(screen){if(Math.abs(screen.width-l*o)<.2*screen.width){l=screen.width/o;r=screen.height/o;i=screen.width;n=screen.height}else{l=screen.width;r=screen.height;i=screen.width*o;n=screen.height*o}}else{i=l*o;n=r*o}var m="createTouch"in a&&"ontouchstart"in e?1:0;var c=["dw:"+l,"dh:"+r,"pw:"+i,"ph:"+n,"ist:"+m].join("&");t.cookie("_med",c,{expires:3650})})(window);
+</script></body></html>

@@ -1,0 +1,120 @@
+﻿body {
+}
+
+  *{
+    margin:0;
+    padding:0;
+    font-family: "微软雅黑";
+  }
+  img{
+    line-height: 0;
+    border:0 none;
+    vertical-align: top;
+  }
+  .wzt-banner{
+    width:100%;
+    height:300px;
+    overflow: hidden;
+    background:url("../image/TB18vdBLFXXXXakaXXXXXXXXXXX-1920-523.jpg_q90.jpg") top center no-repeat;
+    background-size:1000px 300px;
+  }
+  .wzt-main{
+    width:700px;
+    margin:0 auto;
+    position:relative;
+  }
+  .banner2{
+    width:100%;
+    height:400px;
+    overflow: hidden;
+    background:url("../image/TB16548LFXXXXX5XXXXXXXXXXXX-1920-600.jpg_q90.jpg") top center no-repeat;
+     background-size:1000px 400px;
+  }
+  .pic_240{
+    position: absolute;
+    top:20px;
+    left:135px;
+  }
+  .pic_463{
+    position: absolute;
+    top:50px;
+    left:32px;
+  }
+  .wzt-text{
+    position: absolute;
+    top:130px;
+    right:-100px;
+    
+  }
+  .wzt-title{
+    color:#ec4442;
+    font-size:48px;
+    font-weight:bold;
+    height:50px;
+    line-height: 50px;
+  }
+  .wzt-text li,.wzt-text2 li{
+    color:#646464;
+    font-size:18px;
+    height:26px;
+    line-height: 26px;
+    margin-top:20px;
+    margin-left:25px;
+    list-style: outside;
+  }
+  .wzt-banner2{
+    width:100%;
+    height:400px;
+    overflow: hidden;
+    background:url("../image/TB1oidOLFXXXXXxXFXXXXXXXXXX-1920-600.jpg_q90.jpg") top center no-repeat;
+      background-size:1000px 400px;
+  }
+  .banner3{
+    width:100%;
+    height:420px;
+    overflow: hidden;
+  }
+  .ewm{
+    position:absolute;
+    right:170px;
+    top:90px;
+  }
+  .tbdy{
+    position:absolute;
+    top:20px;
+    left:0px;
+  }
+  .tb-ul{
+    list-style: none;
+    position: absolute;
+    top:170px;
+    left:20px;
+  }
+  .tb-ul li{
+    height:20px;
+    line-height: 20px;
+    font-size:22px;
+    color:white;
+    margin-bottom:5px;
+    text-indent: 20px;
+    background:url("../image/TB1Ng8sLFXXXXbqaXXXXXXXXXXX-13-20.png") left top no-repeat;
+    /*background-size:900px 300px;*/
+  }
+  .wzt-text2{
+    position:absolute;
+    top:50px;
+    left:50px;
+   }
+.img-box{
+  margin-top:40px;
+}
+.boximg{
+  display:block;
+  margin-right:15px;
+  float:left;
+}
+.pic425{
+  position:absolute;
+  top:65px;
+  left:537px;
+}
