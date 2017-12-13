@@ -69,7 +69,7 @@
     <Content Include="CSS\global-min.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\main.css" />
-    <Content Include="DianYingYuanTianJiaFrm.aspx" />
+    <Content Include="CSS\Tianjia.css" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
     <Content Include="image\05.jpg" />
@@ -83,6 +83,10 @@
     <Content Include="image\icon-slash.png" />
     <Content Include="image\icon.png" />
     <Content Include="image\login-bg-8.jpg" />
+    <Content Include="image\logo\add1-64.png" />
+    <Content Include="image\logo\configure64.png" />
+    <Content Include="image\logo\trash.png" />
+    <Content Include="image\logo\zoom.png" />
     <Content Include="image\play.png" />
     <Content Include="image\playing.png" />
     <Content Include="image\TB163BlJVXXXXXMXFXXXXXXXXXX-366-119.png" />
@@ -99,14 +103,14 @@
     <Content Include="image\TB1_JFEKXXXXXcOXpXXG0K97pXX-124-173_jpg_q90.jpg" />
     <Content Include="image\zhan.jpg" />
     <Content Include="Index.aspx" />
-    <Content Include="JS\--kissy-k-1.4.2-seed-min.js,tb-global-3.5.8-global-min.js" />
     <Content Include="CSS\--life-pc-movie-1.0.24-pages-header-index.less.css" />
-    <Content Include="JS\--mods-config.js" />
     <Content Include="JS\--seajs-seajs-2.2.3-sea.js,seajs-seajs-combo-1.0.0-seajs-combo.js,seajs-seajs-style-1.0.2-seajs-style.js,seajs-seajs-log-1.0.0-seajs-log.js,jquery-jquery-1.7.2-jquery.js,gallery-json-1.0.3-json.js" />
     <Content Include="login.aspx" />
-    <Content Include="ManageFrm.aspx" />
+    <Content Include="DianYingYuan.aspx" />
+    <Content Include="DianYingYuanTianjiaFrm.aspx" />
     <Content Include="MianFrm.aspx" />
     <Content Include="resources\css\invalid.css" />
+    <Content Include="resources\css\ManageFrm.css" />
     <Content Include="resources\css\reset.css" />
     <Content Include="resources\css\style.css" />
     <Content Include="resources\images\b.png" />
@@ -148,18 +152,12 @@
     <Content Include="resources\scripts\jquery.date.js" />
     <Content Include="resources\scripts\jquery.datePicker.js" />
     <Content Include="resources\scripts\jquery.wysiwyg.js" />
+    <Content Include="resources\scripts\myJS.js" />
     <Content Include="resources\scripts\simpla.jquery.configuration.js" />
     <Content Include="Web.config" />
     <Content Include="main.htm" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DianYingYuanTianJiaFrm.aspx.cs">
-      <DependentUpon>DianYingYuanTianJiaFrm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DianYingYuanTianJiaFrm.aspx.designer.cs">
-      <DependentUpon>DianYingYuanTianJiaFrm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -174,12 +172,19 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageFrm.aspx.cs">
-      <DependentUpon>ManageFrm.aspx</DependentUpon>
+    <Compile Include="DianYingYuan.aspx.cs">
+      <DependentUpon>DianYingYuan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageFrm.aspx.designer.cs">
-      <DependentUpon>ManageFrm.aspx</DependentUpon>
+    <Compile Include="DianYingYuan.aspx.designer.cs">
+      <DependentUpon>DianYingYuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DianYingYuanTianjiaFrm.aspx.cs">
+      <DependentUpon>DianYingYuanTianjiaFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DianYingYuanTianjiaFrm.aspx.designer.cs">
+      <DependentUpon>DianYingYuanTianjiaFrm.aspx</DependentUpon>
     </Compile>
     <Compile Include="MianFrm.aspx.cs">
       <DependentUpon>MianFrm.aspx</DependentUpon>
@@ -208,6 +213,7 @@
       <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

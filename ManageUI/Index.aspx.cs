@@ -11,23 +11,24 @@ namespace ManageUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Object.Equals(Session["name"], null))
-            //{//判断在Session["AdminName"]是否存在值
-            //    Utility.JavaScript.AlertAndRedirect("请登录","Index.aspx",this);
-            //}
-            //else
-            //{//要是存在则记录下这个人的用户名
-            //    string AdminName = Session["name"].ToString();
-            //    name.Text = AdminName;
-            //    if (Object.Equals(Session["limit"], "super"))
-            //    {
-            //        manage.Text = "超级";
-            //    }
-            //    else
-            //    {
-            //        manage.Text = BLL.Manage_Manager.Search_DianYingYuan_byManageName(AdminName);
-            //    }
-            //}
+            if (Object.Equals(Session["name"], null))
+            {//判断在Session["AdminName"]是否存在值
+                Utility.JavaScript.AlertAndRedirect("请登录", "login.aspx", this);
+            }
+            else
+            {//要是存在则记录下这个人的用户名
+                string AdminName = Session["name"].ToString();
+                name.Text = AdminName;
+                if (Object.Equals(Session["limit"], "super"))
+                {
+                    manage.Text = "超级";
+                }
+                else
+                {
+                    manage.Text = BLL.Manage_Manager.Search_DianYingYuan_byManageName(AdminName);
+                    Li_Manage.Style.Add(" display", "none");
+                }
+            }
 
 
         }
@@ -37,10 +38,5 @@ namespace ManageUI
 
         }
 
-        protected void Manage_Click(object sender, EventArgs e)
-        {
-            iframe.Attributes["src"] = "DianYingYuanTianJiaFrm.aspx";
-            
-        }
     }
 }

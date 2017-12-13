@@ -7,11 +7,38 @@ $(document).ready(function(){
 		
 		$("#main-nav li a.nav-top-item").click( // When a top menu item is clicked...
 			function () {
-				$(this).parent().siblings().find("ul").slideUp("normal"); // Slide up all sub menus except the one clicked
-				$(this).next().slideToggle("normal"); // Slide down the clicked sub menu
+			    $(this).parent().siblings().find("ul").slideUp("normal"); // Slide up all sub menus except the one clicked
+			  
+			    $(this).next().slideToggle("normal"); // Slide down the clicked sub menu
+			    $(this).parents('#main-nav').find(".main-item").removeClass("current");
+			    //$(this).addClass("current").parent.siblings().children().removeClass("current");
+			    $(this).addClass("current");
 				return false;
 			}
 		);
+
+		$(".lili").click( 
+                function () {
+                  
+                    //$(this).addClass("current");
+                    //alert("hhhh");
+                    $(".lili").removeClass("current");
+                    $(this).addClass("current");
+                    //	window.location.href=(this.href); // Just open the link instead of a sub menu
+                    //return false;
+                }
+            );
+       
+		$(".SY").click(
+            function () {
+                $(this).parent().siblings().find("ul").slideUp("normal"); // Slide up all sub menus except the one clicked
+                $(this).next().slideToggle("normal"); // Slide down the clicked sub menu
+                $(this).parents('#main-nav').find(".main-item").removeClass("current");
+   
+		$(this).addClass("current");
+		
+            }
+            );
 		
 		$("#main-nav li a.no-submenu").click( // When a menu item with no sub menu is clicked...
 			function () {

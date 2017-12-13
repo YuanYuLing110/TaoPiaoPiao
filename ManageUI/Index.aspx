@@ -6,8 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <!--                       CSS                       -->
-<!-- Reset Stylesheet -->
+ 
 <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
@@ -19,20 +18,14 @@
 <!-- jQuery Configuration -->
 <script type="text/javascript" src="resources/scripts/simpla.jquery.configuration.js"></script>
 <!-- Facebox jQuery Plugin -->
-<script type="text/javascript" src="resources/scripts/facebox.js"></script>
+<%--<script type="text/javascript" src="resources/scripts/facebox.js"></script>
 <!-- jQuery WYSIWYG Plugin -->
 <script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
 <!-- jQuery Datepicker Plugin -->
 <script type="text/javascript" src="resources/scripts/jquery.datePicker.js"></script>
-<script type="text/javascript" src="resources/scripts/jquery.date.js"></script>
-    <script type="text/javascript"  "><!-- 
+<script type="text/javascript" src="resources/scripts/jquery.date.js"></script>--%>
 
-window.onload=function() 
-{ 
-parent.document.all("iframe1").style.height = document.body.scrollHeight; 
-parent.document.all("iframe1").style.width = document.body.scrollWidth; 
-} 
-// --></script>
+  <%--  <script src="resources/scripts/myJS.js"></script>--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -51,69 +44,45 @@ parent.document.all("iframe1").style.width = document.body.scrollWidth;
         <a href="#" title="View the Site">编辑</a> | <a href="#" title="Sign Out">退出</a> </div>
       <ul id="main-nav">
         <!-- Accordion Menu -->
-        <li> <a href="main.htm" class="nav-top-item current" target="main">
+        <li> <a href="main.htm"  target="main" class="SY current main-item " >
        
-          首页</a> </li>
-        <li> <a href="#" class="nav-top-item ">
+          首页</a> 
+           
+        </li>
+        <li runat="server" id="Li_Manage"> <a href="#" class=" nav-top-item main-item ">
           电影院管理 </a>
           <ul>
-            <li><a href="ManageFrm.aspx" target="main">编辑</a></li>
+            <li><a href="DianYingYuan.aspx" target="main" id="aaa1" class="current lili">编辑</a></li>
    
           </ul>
         </li>
-        <li> <a href="#" class="nav-top-item">电影厅管理</a>
+        <li> <a  class="nav-top-item main-item" >电影厅管理</a>
           <ul>
-            <li><a href="#">新建电影厅</a></li>
-            <li><a href="#">管理电影厅</a></li>
+            <li><a href="#" class="lili">新建电影厅</a></li>
+            <li><a href="DianYingYuanTianJiaFrm.aspx" target="main" class="lili">管理电影厅</a></li>
           </ul>
         </li>
-        <li> <a href="#" class="nav-top-item"> 电影管理 </a>
+        <li> <a href="#" class="nav-top-item main-item"> 电影管理 </a>
           <ul>
-            <li><a href="#">上传电影</a></li>
-            <li><a href="#">管理电影</a></li>
+            <li><a href="#" class="lili">上传电影</a></li>
+            <li><a href="#" class="lili">管理电影</a></li>
            
           </ul>
         </li>
-        <li> <a href="#" class="nav-top-item"> 电影片场 </a>
+        <li> <a href="#" class="nav-top-item main-item"> 电影片场 </a>
           <ul>
-            <li><a href="#">创建片场</a></li>
-            <li><a href="#">管理片场</a></li>
+            <li><a href="#" class="lili">创建片场</a></li>
+            <li><a href="#" class="lili">管理片场</a></li>
           
           </ul>
         </li>
       
       </ul>
-     <%-- <!-- End #main-nav -->
-      <div id="messages" style="display: none">
-        <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
-        <h3>3 Messages</h3>
-        <p> <strong>17th May 2009</strong> by Admin<br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <p> <strong>2nd May 2009</strong> by Jane Doe<br />
-          Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <p> <strong>25th April 2009</strong> by Admin<br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <form action="#" method="post">
-          <h4>New Message</h4>
-          <fieldset>
-          <textarea class="textarea" name="textfield" cols="79" rows="5"></textarea>
-          </fieldset>
-          <fieldset>
-          <select name="dropdown" class="small-input">
-            <option value="option1">Send to...</option>
-            <option value="option2">Everyone</option>
-            <option value="option3">Admin</option>
-            <option value="option4">Jane Doe</option>
-          </select>
-          <input class="button" type="submit" value="Send" />
-          </fieldset>
-        </form>
-      </div>
-      <!-- End #messages -->--%>
+    
     </div>
   </div>
   <!-- End #sidebar -->
-       <iframe  name="main" runat="server" class="iframe1" src="main.htm" id="iframe" style="width:100%;height:630px;background-color:gray;margin-left:250px"></iframe>
+       <iframe  name="main" runat="server" class="iframe1" src="main.htm" id="iframe" style="width:100%;height:630px;background-color:gray;margin-left:250px;   overflow-x:hidden"></iframe>
 
   <!-- End #main-content -->
 </div>

@@ -12,6 +12,8 @@ body {
                 color: #555;
                 background: #f0f0f0 url('../images/bg-body.gif') top left repeat-y;
                 font-size: 12px;
+             
+                   overflow-x:hidden
                 }
 
 #body-wrapper {
@@ -160,11 +162,19 @@ a.remove-link:hover {
                 padding: 10px 15px;
                 color: #fff;
                 font-size: 14px;
-                cursor: pointer;
+                /*cursor: pointer;*/
                 display: block;
                 text-decoration: none;
                 }
+.SY {
+      background: transparent url('../images/bg-menu-item-green.gif') right center no-repeat; /* Background image for default color scheme - green */
+     padding: 10px 15px;
+                color: #fff;
+                font-size: 14px;
+                 display: block;
+                text-decoration: none;
 
+}
 #sidebar #main-nav li a.current {
                 background-image: url('../images/bg-menu-item-current.gif') !important;
                 color: #333;
