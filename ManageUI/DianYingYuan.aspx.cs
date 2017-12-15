@@ -11,12 +11,18 @@ namespace ManageUI
 {
     public partial class ManageFrm : System.Web.UI.Page
     {
-        SqlDataReader sr;
+      static  SqlDataReader sr;
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
             sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
             bind();
+         List<string> proList=   DAL.CityServer.getProvice();
+            foreach (string st in proList)
+            {
+              ddl_Sheng.Items.Add(st);
+            }
+       
             if (IsPostBack)
             {
 
@@ -90,7 +96,10 @@ namespace ManageUI
 
         protected void btn_chaxun_Click(object sender, ImageClickEventArgs e)
         {
-
+            string city = ddl_city.SelectedItem.ToString();
+            string area = ddl_area.SelectedItem.ToString();
+            //BLL.DianYingYuanManage.
+           // Utility.JavaScript.Alert(city+":"+area,this);
         }
 
         protected void btn_all_Click(object sender, EventArgs e)
@@ -130,14 +139,41 @@ namespace ManageUI
             //BLL.DianYingYuanManage.deleteDianYingYuan(id);
         }
 
-        protected void gv_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //ImageButton ib = (ImageButton)sender;
-            //int i = int.Parse(ib.CommandArgument);
-            //Utility.JavaScript.Alert("删除" + i, this);
 
+        protected void ddl_Sheng_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Utility.JavaScript.Alert("nj", this);
+            string ProvinceName = ddl_Sheng.SelectedItem.ToString();
+            List<string> cityList = DAL.CityServer.getCity(ProvinceName);
           
+            ddl_city.Items.Clear();
+            ddl_area.Items.Clear();
+
+            foreach (string st in cityList)
+            {
+                ddl_city.Items.Add(st);
+            }
+       
         }
+
+        protected void ddl_city_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Utility.JavaScript.Alert("nj", this);
+            string ProvinceName = ddl_city.SelectedItem.ToString();
+            List<string> cityList = DAL.CityServer.getDistricts(ProvinceName);
+
+            
+            ddl_area.Items.Clear();
+            ddl_area.Items.Add("全部");
+            foreach (string st in cityList)
+            {
+                //dd .Items.Add(st);
+                ddl_area.Items.Add(st);
+            }
+
+        }
+
+      
 
     }
 }

@@ -13,8 +13,9 @@
 <body>
     <form id="form1" runat="server">
         
-      
+       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
       <div id="main-content">
+         
    
     <h2>Welcome</h2>
     <h1>电影院管理</h1>
@@ -34,14 +35,18 @@
   
     <div class="content-box">
         <div class="clear"></div>
-  
+       
     <ul class="shortcut-buttons-set" >
-        
-    <li><asp:DropDownList ID="ddl_Sheng" runat="server"></asp:DropDownList>&nbsp; &nbsp; 省&nbsp; &nbsp;</li>
-    <li><asp:DropDownList ID="ddl_city" runat="server"></asp:DropDownList> &nbsp; &nbsp;   市&nbsp; &nbsp;</li>
-    <li><asp:DropDownList ID="ddl_area" runat="server"></asp:DropDownList>&nbsp; &nbsp;</li>
-    <li><asp:ImageButton ID="btn_chaxun" runat="server"  ImageUrl="~/image/zoom.png" OnClick="btn_chaxun_Click" /></li>
-    <li><asp:Button ID="btn_all" Text="重新查询全部" runat="server" OnClick="btn_all_Click" /></li>
+         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+    <li><asp:DropDownList ID="ddl_Sheng" runat="server" AutoPostBack="True"  OnSelectedIndexChanged="ddl_Sheng_SelectedIndexChanged" ></asp:DropDownList>&nbsp; &nbsp; 省&nbsp; &nbsp;</li>
+    <li><asp:DropDownList ID="ddl_city" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_city_SelectedIndexChanged"></asp:DropDownList> &nbsp; &nbsp;   市&nbsp; &nbsp;</li>
+    <li><asp:DropDownList ID="ddl_area" runat="server" ></asp:DropDownList>&nbsp; &nbsp;</li>
+                
+                </ContentTemplate>
+            </asp:UpdatePanel>
+    <li><asp:ImageButton ID="btn_chaxun" runat="server"   ImageUrl="~/image/zoom.png" OnClick="btn_chaxun_Click" /></li>
+   
 </ul>
             
       <div class="content-box-header">
@@ -56,7 +61,7 @@
       <!-- End .content-box-header -->
 
    
-       <asp:GridView ID="gv" CssClass="gv" Width="1000px"  runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnRowCommand="gv_RowCommand"   >
+       <asp:GridView ID="gv" CssClass="gv" Width="1000px" AutoPostBack="True"   runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnRowCommand="gv_RowCommand"   >
 
            <AlternatingRowStyle BackColor="White" />
 
@@ -130,7 +135,7 @@
         <asp:LinkButton ID="lnkbtnLast" runat="server" OnClick="lnkbtnLast_Click" >尾页</asp:LinkButton> 
 跳转到第<asp:DropDownList ID="ddlCurrentPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCurrentPage_SelectedIndexChanged"> 
         </asp:DropDownList>页
-        
+            
             </div>
               </div>
     </form>
