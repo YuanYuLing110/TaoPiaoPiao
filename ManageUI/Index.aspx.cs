@@ -27,6 +27,7 @@ namespace ManageUI
                 {
                     manage.Text = BLL.Manage_Manager.Search_DianYingYuan_byManageName(AdminName);
                     Li_Manage.Style.Add(" display", "none");
+                    Li_Manager.Style.Add(" display", "none");
                 }
             }
 

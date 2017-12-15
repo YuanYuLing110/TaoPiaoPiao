@@ -58,6 +58,15 @@ namespace ManageUI {
         protected global::System.Web.UI.WebControls.TextBox DYY_city;
         
         /// <summary>
+        /// DYY_Aream 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DYY_Aream;
+        
+        /// <summary>
         /// btn_tianija 控件。
         /// </summary>
         /// <remarks>
@@ -65,5 +74,14 @@ namespace ManageUI {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_tianija;
+        
+        /// <summary>
+        /// btn_fanhui 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_fanhui;
     }
 }

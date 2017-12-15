@@ -77,6 +77,14 @@
           </ul>
         </li>
       
+            <li runat="server" id="Li_Manager"> 
+                <a href="#" class="nav-top-item main-item"> 电影院管理员管理 </a>
+          <ul>
+            <li><a href="#" class="lili">添加管理员</a></li>
+            <li><a href="#" class="lili">编辑管理员</a></li>
+          
+          </ul>
+        </li>
       </ul>
     
     </div>

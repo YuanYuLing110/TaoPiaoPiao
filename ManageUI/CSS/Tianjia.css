@@ -1,0 +1,59 @@
+﻿
+
+body {
+    margin:0;
+    padding:0;
+  background-color:#d8e5e5;
+}
+
+.wenben {
+     font-family: Arial, Helvetica, sans-serif;
+         font-size: 24px;
+         width:200px;
+   
+         color:#065631
+}
+h1 {
+    margin-left:180px;
+    line-height:50px;
+}
+.TextBox {
+    width:250px;
+    height:30px;
+    border-radius:5px
+}
+
+.clear {
+                clear: both;
+                }
+
+
+.ul-first li {
+    float:left;
+}
+
+.TJ{
+    width:100px;
+    height:36px;
+    font-size: 24px;
+      border-radius:5px;
+      margin-left:100px;
+      margin-right:30px;
+      /*position:relative;
+      left:200px;
+      top:30px;
+      margin-left:50px;*/
+}
+.QX{
+    width:100px;
+    height:36px;
+    font-size: 24px;
+      border-radius:5px;
+      float:left;
+    
+}
+#main {
+ 
+ margin-left:250px;
+ margin-top:100px;
+}

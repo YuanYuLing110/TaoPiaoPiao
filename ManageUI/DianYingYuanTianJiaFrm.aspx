@@ -7,6 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="CSS/Tianjia.css" rel="stylesheet" />
+    <style>
+            #main ul  li {
+    list-style-type:none;
+    line-height:35px;
+    }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -47,8 +53,19 @@
             </ul>
          <div class="clear"></div>
        
-        <asp:Button runat="server" ID="btn_tianija" Text="添加" OnClick="btn_tianija_Click" CssClass="TJ" BorderStyle="None" />
-    </div>
+          <ul class="ul-first">
+                <li class="wenben">所在的地区：</li>
+                <li><asp:TextBox ID="DYY_Aream" runat="server" CssClass="TextBox"></asp:TextBox></li>
+                <li><asp:RequiredFieldValidator  ControlToValidate="DYY_Aream"  ErrorMessage="所在的地区不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>
+</li>
+            </ul>
+         <div class="clear"></div>
+        <ul class="ul-first">
+            <li>
+                <asp:Button runat="server" ID="btn_tianija" Text="添加" OnClick="btn_tianija_Click" CssClass="TJ" BorderStyle="None" /></li>
+           <li><asp:Button runat="server" ID="btn_fanhui" Text="返回" OnClick="btn_fanhui_Click" CssClass="QX" BorderStyle="None" /></li>
+   </ul>
+             </div>
     </form>
 </body>
 </html>
