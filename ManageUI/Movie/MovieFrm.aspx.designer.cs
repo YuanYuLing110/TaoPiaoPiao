@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageUI
+namespace ManageUI.Movie
 {
 
 
-    public partial class MianFrm
+    public partial class MovieFrm
     {
 
         /// <summary>

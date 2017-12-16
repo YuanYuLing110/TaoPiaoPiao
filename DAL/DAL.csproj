@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CityServer.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="DianYingTingServer.cs" />
     <Compile Include="DianYingYuanServer.cs" />
     <Compile Include="ManageServer.cs" />
     <Compile Include="MovieServer.cs" />

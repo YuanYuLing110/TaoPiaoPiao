@@ -150,22 +150,6 @@ namespace DAL
         }
 
 
-        /// <summary>
-        /// 添加新的用户
-        /// </summary>
-        /// <param name="u"></param>
-        /// <returns></returns>
-        //public static bool insertUser(Manage u)
-        //{
-        //    string sql = "insert into Manage values(@name,@pwd,@email,@time)";
-        //    SqlParameter[] p ={
-        //              new SqlParameter("@name",u.U_NAME), 
-        //              new SqlParameter("@pwd",u.U_PSSWORD),
-        //              new SqlParameter("@email",u.U_EMAIL),
-        //              new SqlParameter("@time",u.U_REGISTERTIME)
-        //                     };
-        //    int i = DBHelper.ExecuteNonQuery(sql, CommandType.Text, p);
-        //    return i > 0;
-        //}
+     
     }
 }

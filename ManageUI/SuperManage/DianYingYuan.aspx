@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 
-    <link href="resources/css/ManageFrm.css" rel="stylesheet" />
+    <link href="../resources/css/ManageFrm.css" rel="stylesheet" />
   
 </head>
 <body>
@@ -20,11 +20,11 @@
     <h2>Welcome</h2>
     <h1>电影院管理</h1>
     <ul class="shortcut-buttons-set">
-      <li><a class="shortcut-button" href="DianYingYuanTianjiaFrm.aspx"><span> <img src="image/logo/add1-64.png" alt="icon" /><br />
+      <li><a class="shortcut-button" href="DianYingYuanAddFrm.aspx"><span> <img src="../image/logo/add1-64.png" alt="icon" /><br />
         添加</span></a></li>
   <%--    <li><a class="shortcut-button" href="#"><span> <img src="image/logo/configure64.png" alt="icon" /><br />
        修改 </span></a></li>--%>
-      <li><a class="shortcut-button" href="#"><span> <img src="image/logo/zoom.png" alt="icon" /><br />
+      <li><a class="shortcut-button" href="#"><span> <img src="../image/logo/zoom.png" alt="icon" /><br />
         条件查询 </span></a></li>
      <%-- <li><a class="shortcut-button" href="#"><span> <img src="image/logo/trash.png" alt="icon" /><br />
         删除 </span></a></li>--%>
@@ -61,7 +61,7 @@
       <!-- End .content-box-header -->
 
    
-       <asp:GridView ID="gv" CssClass="gv" Width="1000px" AutoPostBack="True"   runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnRowCommand="gv_RowCommand"   >
+       <asp:GridView ID="gv" CssClass="gv" Width="1000px" AutoPostBack="True"   runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnRowCommand="gv_RowCommand"  >
 
            <AlternatingRowStyle BackColor="White" />
 

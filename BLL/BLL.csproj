@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DianYingTingManage.cs" />
     <Compile Include="DianYingYuanManage.cs" />
     <Compile Include="Manage_Manager.cs" />
     <Compile Include="MovieManage.cs" />

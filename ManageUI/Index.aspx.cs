@@ -22,12 +22,18 @@ namespace ManageUI
                 if (Object.Equals(Session["limit"], "super"))
                 {
                     manage.Text = "超级";
+                    li_DianYingTing.Style.Add(" display", "none");
+
+                    li_pianChang.Style.Add(" display", "none");
+
+                 
                 }
                 else
                 {
                     manage.Text = BLL.Manage_Manager.Search_DianYingYuan_byManageName(AdminName);
                     Li_Manage.Style.Add(" display", "none");
                     Li_Manager.Style.Add(" display", "none");
+                    li_Movie.Style.Add(" display", "none");
                 }
             }
 

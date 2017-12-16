@@ -13,7 +13,7 @@ $(document).ready(function(){
 			    $(this).parents('#main-nav').find(".main-item").removeClass("current");
 			    //$(this).addClass("current").parent.siblings().children().removeClass("current");
 			    $(this).addClass("current");
-				return false;
+			
 			}
 		);
 

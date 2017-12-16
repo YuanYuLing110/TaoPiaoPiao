@@ -131,5 +131,17 @@ namespace BLL
       {
           return DAL.DianYingYuanServer.search_DianYingYuanCount_byArea(area);
       }
+
+       /// <summary>
+     /// 根据管理员姓名搜索电影院id
+     /// </summary>
+     /// <param name="st"></param>
+     /// <returns></returns>
+
+      public static int search_DianYingYuanId_byM_name(string st)
+      {
+
+          return DAL.DianYingYuanServer.search_DianYingYuanId_byM_name(st);
+      }
     }
 }

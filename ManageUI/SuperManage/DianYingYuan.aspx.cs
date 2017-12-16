@@ -84,6 +84,7 @@ namespace ManageUI
             //sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr("成都市");
             //dt = new DataTable();
             //dt.Load(sr);
+          
             dt = (DataTable)Application["dt"];
             gv.DataSource = dt;
         

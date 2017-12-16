@@ -52,24 +52,24 @@
         <li runat="server" id="Li_Manage"> <a href="#" class=" nav-top-item main-item ">
           电影院管理 </a>
           <ul>
-            <li><a href="DianYingYuan.aspx" target="main" id="aaa1" class="current lili">编辑</a></li>
+            <li><a href="SuperManage/DianYingYuan.aspx" target="main" id="aaa1" class="current lili">编辑</a></li>
    
           </ul>
         </li>
-        <li> <a  class="nav-top-item main-item" >电影厅管理</a>
+        <li runat="server" id="li_DianYingTing"> <a  class="nav-top-item main-item" >电影厅管理</a>
           <ul>
             <li><a href="#" class="lili">新建电影厅</a></li>
-            <li><a href="DianYingYuanTianJiaFrm.aspx" target="main" class="lili">管理电影厅</a></li>
+            <li><a href="DianYingTing/DianYingTingFrm.aspx" target="main" class="lili">管理电影厅</a></li>
           </ul>
         </li>
-        <li> <a href="#" class="nav-top-item main-item"> 电影管理 </a>
+        <li runat="server" id="li_Movie"> <a href="#" class="nav-top-item main-item"> 电影管理 </a>
           <ul>
             <li><a href="#" class="lili">上传电影</a></li>
             <li><a href="#" class="lili">管理电影</a></li>
            
           </ul>
         </li>
-        <li> <a href="#" class="nav-top-item main-item"> 电影片场 </a>
+        <li runat="server" id="li_pianChang"> <a href="#" class="nav-top-item main-item"> 电影片场 </a>
           <ul>
             <li><a href="#" class="lili">创建片场</a></li>
             <li><a href="#" class="lili">管理片场</a></li>
@@ -84,6 +84,10 @@
             <li><a href="#" class="lili">编辑管理员</a></li>
           
           </ul>
+        </li>
+             <li runat="server" id="Li1"> 
+                <a href="#" class="nav-top-item main-item"> 个人主页 </a>
+         
         </li>
       </ul>
     

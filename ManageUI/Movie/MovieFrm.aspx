@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MianFrm.aspx.cs" Inherits="ManageUI.MianFrm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MovieFrm.aspx.cs" Inherits="ManageUI.Movie.MovieFrm" %>
 
 <!DOCTYPE html>
 

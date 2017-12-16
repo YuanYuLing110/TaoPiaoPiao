@@ -297,5 +297,22 @@ namespace DAL
             return (int)i;
 
         }
+
+     /// <summary>
+     /// 根据管理员姓名搜索电影院id
+     /// </summary>
+     /// <param name="st"></param>
+     /// <returns></returns>
+
+     public static int search_DianYingYuanId_byM_name(string st)
+     {
+         string str = "select DianYingYuan_id from Manage  where name=@name";
+      SqlParameter[] p = {
+             
+                new SqlParameter("@name",st)
+                    };
+            object i = DBHelper.ExecuteScalar(str, CommandType.Text, p);
+            return (int)i;
+     }
     }
 }

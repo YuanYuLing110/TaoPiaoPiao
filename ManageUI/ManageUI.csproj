@@ -70,7 +70,12 @@
     <Content Include="CSS\login.css" />
     <Content Include="CSS\main.css" />
     <Content Include="CSS\Tianjia.css" />
-    <Content Include="DianYingYuanEdit.aspx" />
+    <Content Include="DianYingTing\DianYingTingFrm.aspx" />
+    <Content Include="DianYingTing\DianYingTingTianJiaFrm.aspx" />
+    <Content Include="Movie\MovieAddFrm.aspx" />
+    <Content Include="Movie\MovieFrm.aspx" />
+    <Content Include="PianChang\PianChangAddFrm.aspx" />
+    <Content Include="SuperManage\DianYingYuanEdit.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
     <Content Include="image\05.jpg" />
@@ -108,9 +113,9 @@
     <Content Include="CSS\--life-pc-movie-1.0.24-pages-header-index.less.css" />
     <Content Include="JS\--seajs-seajs-2.2.3-sea.js,seajs-seajs-combo-1.0.0-seajs-combo.js,seajs-seajs-style-1.0.2-seajs-style.js,seajs-seajs-log-1.0.0-seajs-log.js,jquery-jquery-1.7.2-jquery.js,gallery-json-1.0.3-json.js" />
     <Content Include="login.aspx" />
-    <Content Include="DianYingYuan.aspx" />
-    <Content Include="DianYingYuanTianjiaFrm.aspx" />
-    <Content Include="MianFrm.aspx" />
+    <Content Include="SuperManage\DianYingYuan.aspx" />
+    <Content Include="SuperManage\DianYingYuanAddFrm.aspx" />
+    <Content Include="PianChang\PianChang.aspx" />
     <Content Include="resources\css\invalid.css" />
     <Content Include="resources\css\ManageFrm.css" />
     <Content Include="resources\css\reset.css" />
@@ -163,11 +168,46 @@
     <Content Include="XML\Provinces.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DianYingYuanEdit.aspx.cs">
+    <Compile Include="DianYingTing\DianYingTingFrm.aspx.cs">
+      <DependentUpon>DianYingTingFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DianYingTing\DianYingTingFrm.aspx.designer.cs">
+      <DependentUpon>DianYingTingFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DianYingTing\DianYingTingTianJiaFrm.aspx.cs">
+      <DependentUpon>DianYingTingTianJiaFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DianYingTing\DianYingTingTianJiaFrm.aspx.designer.cs">
+      <DependentUpon>DianYingTingTianJiaFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movie\MovieAddFrm.aspx.cs">
+      <DependentUpon>MovieAddFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movie\MovieAddFrm.aspx.designer.cs">
+      <DependentUpon>MovieAddFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movie\MovieFrm.aspx.cs">
+      <DependentUpon>MovieFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movie\MovieFrm.aspx.designer.cs">
+      <DependentUpon>MovieFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PianChang\PianChangAddFrm.aspx.cs">
+      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PianChang\PianChangAddFrm.aspx.designer.cs">
+      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperManage\DianYingYuanEdit.aspx.cs">
       <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DianYingYuanEdit.aspx.designer.cs">
+    <Compile Include="SuperManage\DianYingYuanEdit.aspx.designer.cs">
       <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
@@ -184,26 +224,26 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DianYingYuan.aspx.cs">
+    <Compile Include="SuperManage\DianYingYuan.aspx.cs">
       <DependentUpon>DianYingYuan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DianYingYuan.aspx.designer.cs">
+    <Compile Include="SuperManage\DianYingYuan.aspx.designer.cs">
       <DependentUpon>DianYingYuan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DianYingYuanTianjiaFrm.aspx.cs">
-      <DependentUpon>DianYingYuanTianjiaFrm.aspx</DependentUpon>
+    <Compile Include="SuperManage\DianYingYuanAddFrm.aspx.cs">
+      <DependentUpon>DianYingYuanAddFrm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DianYingYuanTianjiaFrm.aspx.designer.cs">
-      <DependentUpon>DianYingYuanTianjiaFrm.aspx</DependentUpon>
+    <Compile Include="SuperManage\DianYingYuanAddFrm.aspx.designer.cs">
+      <DependentUpon>DianYingYuanAddFrm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MianFrm.aspx.cs">
-      <DependentUpon>MianFrm.aspx</DependentUpon>
+    <Compile Include="PianChang\PianChang.aspx.cs">
+      <DependentUpon>PianChang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MianFrm.aspx.designer.cs">
-      <DependentUpon>MianFrm.aspx</DependentUpon>
+    <Compile Include="PianChang\PianChang.aspx.designer.cs">
+      <DependentUpon>PianChang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

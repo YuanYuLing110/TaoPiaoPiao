@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DianYingYuanTianjiaFrm.aspx.cs" Inherits="ManageUI.ManagerTianjiaFrm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DianYingYuanAddFrm.aspx.cs" Inherits="ManageUI.ManagerTianjiaFrm" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="CSS/Tianjia.css" rel="stylesheet" />
+    <link href="../CSS/Tianjia.css" rel="stylesheet" />
     <style>
             #main ul  li {
     list-style-type:none;
