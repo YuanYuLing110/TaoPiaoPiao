@@ -33,6 +33,13 @@ namespace Model //ÐÞ¸ÄÃû×Ö¿Õ¼ä
 			get { return y_phone; }
 			set { y_phone = value; }
 		}
+
+        private string y_provice;
+        public string Y_provice
+        {
+            get { return y_provice; }
+            set { y_provice = value; }
+        }
 	
 		private string y_city;
 		public string Y_city

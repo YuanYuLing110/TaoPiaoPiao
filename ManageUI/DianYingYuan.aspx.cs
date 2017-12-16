@@ -12,10 +12,18 @@ namespace ManageUI
     public partial class ManageFrm : System.Web.UI.Page
     {
       static  SqlDataReader sr;
+   
+       DataTable dt;
+  
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
             sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
+          
+            //sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr("成都市");
+            dt = new DataTable();
+            dt.Load(sr);
+            Application["dt"] = dt;
             bind();
          List<string> proList=   DAL.CityServer.getProvice();
             foreach (string st in proList)
@@ -66,31 +74,32 @@ namespace ManageUI
 
         protected void ddlCurrentPage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.gv.PageIndex = this.ddlCurrentPage.SelectedIndex;
-            bind();
+            //this.gv.PageIndex = int.Parse(this.ddlCurrentPage.SelectedItem.ToString()) - 1;
+            //Utility.JavaScript.Alert(this.ddlCurrentPage.SelectedIndex.ToString(),this);
+            //bind();
         }
 
         public void bind()
         {
-            //SqlDataReader sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
-            DataTable dt = new DataTable();
-            sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
-            dt.Load(sr);
+            //sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr("成都市");
+            //dt = new DataTable();
+            //dt.Load(sr);
+            dt = (DataTable)Application["dt"];
             gv.DataSource = dt;
-            //gv.DataKeyNames = new string[] { "学号" };
+        
             gv.DataBind();
             this.ddlCurrentPage.Items.Clear();
             for (int i = 1; i <= this.gv.PageCount; i++)
             {
                 this.ddlCurrentPage.Items.Add(i.ToString());
             }
-            this.ddlCurrentPage.SelectedIndex = this.gv.PageIndex;
+            ddlCurrentPage.SelectedIndex = this.gv.PageIndex;
         }
 
         protected void gv_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            gv.PageIndex = e.NewPageIndex;
-            bind();
+            //gv.PageIndex = e.NewPageIndex;
+            //bind();
 
         }
 
@@ -98,8 +107,32 @@ namespace ManageUI
         {
             string city = ddl_city.SelectedItem.ToString();
             string area = ddl_area.SelectedItem.ToString();
+            if (area.Equals("全部"))
+            {
+                sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr(city);
+                dt = new DataTable();
+               dt.Load(sr);
+               Application["dt"] = dt;
+               this.gv.PageIndex = 0;
+               bind();
+               
+
+
+            }
+            else
+            {
+                sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeAreaAll_sr(area);
+                dt = new DataTable();
+                dt.Load(sr);
+                Application["dt"] = dt;
+               this.gv.PageIndex = 0;
+                bind();
+               
+
+            }
+           
             //BLL.DianYingYuanManage.
-           // Utility.JavaScript.Alert(city+":"+area,this);
+            //Utility.JavaScript.Alert(city + ":" + area, this);
         }
 
         protected void btn_all_Click(object sender, EventArgs e)
@@ -127,16 +160,19 @@ namespace ManageUI
 
         protected void Unnamed_Click(object sender, ImageClickEventArgs e)
         {
-            Utility.JavaScript.Alert("修改", this);
+            //Utility.JavaScript.Alert("修改", this);
+            ImageButton ib = (ImageButton)sender;
+            int i = int.Parse(ib.CommandArgument);
+            Response.Redirect("DianYingYuanEdit.aspx?Y_id="+i);
         }
 
         protected void Unnamed_Click1(object sender, ImageClickEventArgs e)
         {
             ImageButton ib = (ImageButton)sender;
-            int i = int.Parse(ib.CommandArgument);
+            int id = int.Parse(ib.CommandArgument);
             //int id = (int)e.
-            Utility.JavaScript.Alert("删除" + i, this);
-            //BLL.DianYingYuanManage.deleteDianYingYuan(id);
+            //Utility.JavaScript.Alert("删除" + i, this);
+            BLL.DianYingYuanManage.deleteDianYingYuan(id);
         }
 
 

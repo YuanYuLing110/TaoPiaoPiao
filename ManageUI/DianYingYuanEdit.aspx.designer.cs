@@ -10,7 +10,7 @@
 namespace ManageUI {
     
     
-    public partial class ManagerTianjiaFrm {
+    public partial class DianYingYuanEdit {
         
         /// <summary>
         /// form1 控件。

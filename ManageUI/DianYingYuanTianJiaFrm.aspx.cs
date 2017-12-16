@@ -14,6 +14,13 @@ namespace ManageUI
         {
 
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+            List<string> proList = DAL.CityServer.getProvice();
+            foreach (string st in proList)
+            {
+                ddl_proice.Items.Add(st);
+               
+            }
+       
             if (IsPostBack)
             {
 
@@ -24,15 +31,18 @@ namespace ManageUI
 
         protected void btn_tianija_Click(object sender, EventArgs e)
         {
+            
             string name = DYY_name.Text.Trim();
             string dz = DYY_address.Text.Trim();
             string phone = DYY_phone.Text.Trim();
-            string city = DYY_city.Text.Trim();
-            string area = DYY_Aream.Text.Trim();
+            string pro = ddl_proice.Text.Trim();
+            string city = ddl_city.SelectedItem.ToString();
+            string area = ddl_area.SelectedItem.ToString();
             DianYingYuan ddy = new DianYingYuan();
             ddy.Y_Name = name;
             ddy.Y_address = dz;
             ddy.Y_phone = phone;
+            ddy.Y_provice = pro;
             ddy.Y_city = city;
             ddy.Y_area = area;
             if (BLL.DianYingYuanManage.PanDuan_DianYingYianExist(name))
@@ -49,5 +59,36 @@ namespace ManageUI
         {
 
         }
+
+        protected void ddl_proice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ProvinceName = ddl_proice.SelectedItem.ToString();
+            List<string> cityList = DAL.CityServer.getCity(ProvinceName);
+
+            ddl_city.Items.Clear();
+            ddl_area.Items.Clear();
+
+            foreach (string st in cityList)
+            {
+                ddl_city.Items.Add(st);
+            }
+        }
+
+        protected void ddl_city_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ProvinceName = ddl_city.SelectedItem.ToString();
+            List<string> cityList = DAL.CityServer.getDistricts(ProvinceName);
+
+
+            ddl_area.Items.Clear();
+         
+            foreach (string st in cityList)
+            {
+                //dd .Items.Add(st);
+                ddl_area.Items.Add(st);
+            }
+        }
+
+   
     }
 }

@@ -70,6 +70,7 @@
     <Content Include="CSS\login.css" />
     <Content Include="CSS\main.css" />
     <Content Include="CSS\Tianjia.css" />
+    <Content Include="DianYingYuanEdit.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
     <Content Include="image\05.jpg" />
@@ -162,6 +163,13 @@
     <Content Include="XML\Provinces.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DianYingYuanEdit.aspx.cs">
+      <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DianYingYuanEdit.aspx.designer.cs">
+      <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

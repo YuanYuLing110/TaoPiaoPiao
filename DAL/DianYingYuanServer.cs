@@ -23,6 +23,7 @@ namespace DAL
                 new SqlParameter("@y_Name",ddy.Y_Name),
                   new SqlParameter("@y_address",ddy.Y_address),
                     new SqlParameter("@y_phone",ddy.Y_phone),
+                       new SqlParameter("@y_provice ",ddy.Y_provice),
                       new SqlParameter("@y_city",ddy.Y_city),
                         new SqlParameter("@y_area",ddy.Y_area)
                     };
@@ -81,6 +82,7 @@ namespace DAL
                    dyy.Y_Name = sdr["y_Name"].ToString();
                    dyy.Y_address = sdr["y_address"].ToString();
                    dyy.Y_phone = sdr["y_phone"].ToString();
+                   dyy.Y_provice = sdr["y_provice"].ToString();
                    dyy.Y_city = sdr["y_city"].ToString();
                    dyy.Y_area = sdr["y_area"].ToString();
                   list.Add(dyy);
@@ -88,6 +90,37 @@ namespace DAL
            }
            sdr.Close();
            return list;
+        }
+
+        /// <summary>
+        ///根据电影院id查询电影详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static DianYingYuan search_DianYingYuan_idl(int id)
+        {
+            //List<DianYingYuan> list = new List<DianYingYuan>();
+            string str = "select * from DianYingYuan where y_id=@id";
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@id",id)
+                    };
+            DianYingYuan dyy = new DianYingYuan();
+            SqlDataReader sdr = DBHelper.ExecuteReader(str, CommandType.Text, p);
+            while (sdr.Read())
+            {
+                
+                dyy.Y_id = int.Parse(sdr["y_id"].ToString());
+                dyy.Y_Name = sdr["y_Name"].ToString();
+                dyy.Y_address = sdr["y_address"].ToString();
+                dyy.Y_phone = sdr["y_phone"].ToString();
+                dyy.Y_provice = sdr["y_provice"].ToString();
+                dyy.Y_city = sdr["y_city"].ToString();
+                dyy.Y_area = sdr["y_area"].ToString();
+              
+            }
+            sdr.Close();
+            return dyy;
         }
 
 
@@ -131,6 +164,7 @@ namespace DAL
                     dyy.Y_Name = sdr["y_Name"].ToString();
                     dyy.Y_address = sdr["y_address"].ToString();
                     dyy.Y_phone = sdr["y_phone"].ToString();
+                    dyy.Y_provice = sdr["y_provice"].ToString();
                     dyy.Y_city = sdr["y_city"].ToString();
                     dyy.Y_area = sdr["y_area"].ToString();
                     list.Add(dyy);
@@ -147,7 +181,7 @@ namespace DAL
         /// <returns></returns>
         public static SqlDataReader search_DianYingYuan_byGradeCityAll_sr(string city)
         {
-            List<DianYingYuan> list = new List<DianYingYuan>();
+           
             SqlParameter[] p = {
              
                         new SqlParameter("@city",city)
@@ -179,6 +213,7 @@ namespace DAL
                     dyy.Y_Name = sdr["y_Name"].ToString();
                     dyy.Y_address = sdr["y_address"].ToString();
                     dyy.Y_phone = sdr["y_phone"].ToString();
+                    dyy.Y_provice = sdr["y_provice"].ToString();
                     dyy.Y_city = sdr["y_city"].ToString();
                     dyy.Y_area = sdr["y_area"].ToString();
                     list.Add(dyy);
@@ -202,7 +237,8 @@ namespace DAL
                 new SqlParameter("@y_Name",ddy.Y_Name),
                   new SqlParameter("@y_address",ddy.Y_address),
                     new SqlParameter("@y_phone",ddy.Y_phone),
-                      new SqlParameter("@y_city	 ",ddy.Y_city),
+                       new SqlParameter("@y_provice ",ddy.Y_provice),
+                      new SqlParameter("@y_city",ddy.Y_city),
                         new SqlParameter("@y_area",ddy.Y_area)
                     };
             int i = DBHelper.ExecuteNonQuery("alterDianYingYuan", CommandType.StoredProcedure, p);
