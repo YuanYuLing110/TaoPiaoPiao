@@ -67,14 +67,17 @@
   <ItemGroup>
     <Content Include="CSS\--mods-reset.css,mods-common.less.css" />
     <Content Include="CSS\global-min.css" />
+    <Content Include="CSS\kalendae.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\main.css" />
+    <Content Include="CSS\MovieAddFrm.css" />
     <Content Include="CSS\Tianjia.css" />
     <Content Include="DianYingTing\DianYingTingFrm.aspx" />
     <Content Include="DianYingTing\DianYingTingTianJiaFrm.aspx" />
+    <Content Include="image\img7.jpg" />
+    <Content Include="JS\kalendae.standalone.js" />
     <Content Include="Movie\MovieAddFrm.aspx" />
     <Content Include="Movie\MovieFrm.aspx" />
-    <Content Include="PianChang\PianChangAddFrm.aspx" />
     <Content Include="SuperManage\DianYingYuanEdit.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
@@ -115,7 +118,6 @@
     <Content Include="login.aspx" />
     <Content Include="SuperManage\DianYingYuan.aspx" />
     <Content Include="SuperManage\DianYingYuanAddFrm.aspx" />
-    <Content Include="PianChang\PianChang.aspx" />
     <Content Include="resources\css\invalid.css" />
     <Content Include="resources\css\ManageFrm.css" />
     <Content Include="resources\css\reset.css" />
@@ -196,13 +198,6 @@
     <Compile Include="Movie\MovieFrm.aspx.designer.cs">
       <DependentUpon>MovieFrm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PianChang\PianChangAddFrm.aspx.cs">
-      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PianChang\PianChangAddFrm.aspx.designer.cs">
-      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SuperManage\DianYingYuanEdit.aspx.cs">
       <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,13 +232,6 @@
     </Compile>
     <Compile Include="SuperManage\DianYingYuanAddFrm.aspx.designer.cs">
       <DependentUpon>DianYingYuanAddFrm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PianChang\PianChang.aspx.cs">
-      <DependentUpon>PianChang.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PianChang\PianChang.aspx.designer.cs">
-      <DependentUpon>PianChang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

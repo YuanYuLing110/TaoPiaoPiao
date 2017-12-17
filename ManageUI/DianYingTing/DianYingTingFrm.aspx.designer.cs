@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace ManageUI.Movie {
+namespace ManageUI.DianYingTing {
     
     
-    public partial class MovieFrm {
+    public partial class MainFrm {
         
         /// <summary>
         /// form1 控件。
@@ -22,12 +22,21 @@ namespace ManageUI.Movie {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// div1 控件。
+        /// lal_DianYingYuan 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div1;
+        protected global::System.Web.UI.WebControls.Label lal_DianYingYuan;
+        
+        /// <summary>
+        /// gv 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv;
     }
 }

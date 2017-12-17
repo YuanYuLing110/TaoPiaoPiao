@@ -1,0 +1,44 @@
+﻿body {
+
+}
+
+
+#newPreview {FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)} 
+
+label {
+    width:200px;
+    font-size:24px;
+}
+
+.txt {
+    border-radius:4px;
+    width:300px;
+    height:35px;
+    font-size:16px;
+}
+
+#zuo {
+    width:500px;
+     
+      text-align:center
+    
+}
+#zuo table {
+    margin:0 auto;
+     text-align:left
+  
+}
+
+#you {
+    /*float:left;*/
+}
+
+.cl {
+    float:left
+}
+
+.btn {
+    width:100px;
+    font-size:24px;
+    margin-left:50px;
+}
