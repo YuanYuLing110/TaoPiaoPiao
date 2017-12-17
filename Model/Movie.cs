@@ -89,5 +89,12 @@ namespace Model //ĞŞ¸ÄÃû×Ö¿Õ¼ä
 			get { return m_count; }
 			set { m_count = value; }
 		}
+
+        private int m_minute;
+        public int M_minute
+        {
+            get { return m_minute; }
+            set { m_minute = value; }
+        }
 	}
 }

@@ -11,7 +11,7 @@
     <script src="../resources/scripts/jquery-1.3.2.min.js"></script>
     <script>
         function PreviewImg(imgFile) {
-            //alert(imgFile.value);
+         
             var ext = imgFile.value.toLowerCase().substring(imgFile.value.length - 3, imgFile.value.length);
             if (ext == "jpg" || ext == "png" || ext == "gif" || ext == "bmp") {
               
@@ -25,9 +25,7 @@
             }
         }
     
-        $(document).ready(function () {
-          
-        })
+    
     </script>
 
     <script src="../JS/kalendae.standalone.js"></script>
@@ -44,6 +42,9 @@
                         <label>电影名：</label></td>
                     <td>
                         <asp:TextBox runat="server" ID="m_name" CssClass="txt"></asp:TextBox></td>
+                    <td>
+<asp:RequiredFieldValidator  ControlToValidate="m_name"  ErrorMessage="电影名不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
 
@@ -52,36 +53,96 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="m_direct" CssClass="txt"></asp:TextBox></td>
+                    <td>
+  <asp:RequiredFieldValidator  ControlToValidate="m_direct"  ErrorMessage="导演名不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <label>主演：</label></td>
                     <td>
                         <asp:TextBox runat="server" ID="m_star" CssClass="txt"></asp:TextBox></td>
+                    <td>
+  <asp:RequiredFieldValidator  ControlToValidate="m_star"  ErrorMessage="导演名不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      
+
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <label>类型：</label></td>
+                    <td id="tb_Type">
+                        <asp:CheckBox ID="cb_DongHua" runat="server" Text="动画" />
+                         <asp:CheckBox ID="cb_Maoxian" runat="server" Text="冒险" />
+                         <asp:CheckBox ID="cb_xiju" runat="server" Text="喜剧" />
+                         <asp:CheckBox ID="cb_aiQing" runat="server" Text="爱情" />
+                        <asp:CheckBox ID="cb_juQing" runat="server" Text="剧情" />
+                        <br />
+                            <asp:CheckBox ID="cb_zhanZheng" runat="server" Text="战争" />   
+                         <asp:CheckBox ID="cb_keHuan" runat="server" Text="科幻" />
+                           <asp:CheckBox ID="cb_qiHuan" runat="server" Text="奇幻" />
+                           <asp:CheckBox ID="cb_jingSong" runat="server" Text="惊悚" />
+                        <asp:CheckBox runat="server" ID="cb_dongZuo" Text="动作" />
+ 
+                        <%--<asp:TextBox runat="server" ID="m_type" CssClass="txt"></asp:TextBox></td>--%>
+                   
+ <%-- <asp:RequiredFieldValidator  ControlToValidate="m_type"  ErrorMessage="导演名不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      --%>
+
+                    </td>
+                </tr>
+                   <tr>
                     <td>
-                        <asp:TextBox runat="server" ID="m_type" CssClass="txt"></asp:TextBox></td>
+                        <label>地区：</label></td>
+                    <td>
+                               <asp:TextBox runat="server" ID="m_state"></asp:TextBox>
+  <asp:RequiredFieldValidator  ControlToValidate="m_state"  ErrorMessage="地区不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>     
+                
+                   
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <label>语言：</label></td>
                     <td>
-                        <asp:TextBox runat="server" ID="m_voice" CssClass="txt"></asp:TextBox></td>
+                       
+                        <asp:DropDownList runat="server" ID="ddl_voice">
+                             <asp:ListItem>国语</asp:ListItem>    
+                            <asp:ListItem>英语</asp:ListItem>
+                                             
+                        </asp:DropDownList>
+                    </td>
                 </tr>
+
                 <tr>
                     <td>
                         <label>放映时间:</label></td>
                     <td>
-                        <input type="text" id="m_time" class="auto-kal txt" data-kal="direction: 'future'" /></td>
+                        <input type="text" id="m_time" class="auto-kal txt" data-kal="direction: 'future'" runat="server" /></td>
+                    <td>
+  <asp:RequiredFieldValidator  ControlToValidate="m_time"  ErrorMessage="必须选择上映时间" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      
+</td>
+                </tr>
+                   <tr>
+                    <td>
+                        <label>片长：</label></td>
+                    <td>
+                        <asp:TextBox runat="server" ID="m_minute"></asp:TextBox>  </td>
+                        <td>
+  <asp:RequiredFieldValidator  ControlToValidate="m_minute"  ErrorMessage="片长不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>     
+<%-- <asp:RangeValidator ControlToValidate="m_minute" ErrorMessage="输入必须是整数" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"   Type="Integer"></asp:RangeValidator>--%>
+                            </td>            
+
+                  
                 </tr>
                 <tr>
                     <td>
                         <label>专业评分：</label></td>
                     <td>
-                        <asp:TextBox runat="server" ID="m_grade"></asp:TextBox></td>
+                        <asp:TextBox runat="server" ID="m_grade"></asp:TextBox>
+  <asp:RequiredFieldValidator  ControlToValidate="m_grade"  ErrorMessage="评分不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>     
+ <asp:RangeValidator ControlToValidate="m_grade" ErrorMessage="输入必须是数字且范围为1~10" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify" MaximumValue="10" MinimumValue="0" Type="Double"></asp:RangeValidator>
+                                        
+
+                    </td>
                 </tr>
 
 
@@ -93,35 +154,24 @@
 
             <label>详情：</label>
             <br />
-            <textarea style="width: 300px; height: 100px;"></textarea>
+            <textarea id="txtarea" style="width: 300px; height: 100px;" runat="server"></textarea>
             <br />
             <label>添加电影宣传图片：</label>
             <br />
             <asp:FileUpload ID="File1" runat="server" onchange="PreviewImg(this)" />
-
+            <div id="newPreview" style="width:200px;height:300px; "></div>  
             <%--     <button type="button" onclick="document.getElementById('FileUpload').click();">选择图片</button>  --%>
             <br />
-            <%--<asp:Image runat="server" Width="200px" ID="Image1" />--%>
-            <img id="img1" width="200" src="E:/毕业设计/TaoPiaoPiao4/ManageUI/image/9f9fd69dd18c06cb8041935eebf1b3b5.jpg" />
+          
         </div>
         <div style="clear: both;"></div>
-        <%--<div id="newPreview"></div>--%>
-        <%--<input type="file" onchange="PreviewImg(this)" id="upimg" runat="server"  />--%>
-
-        <asp:Button runat="server" ID="btn_tianJia" Text="添加" CssClass="btn" />
+     
+        <asp:Button runat="server" ID="btn_tianJia" Text="添加" CssClass="btn" OnClick="btn_tianJia_Click" />
         <asp:Button runat="server" ID="btn_cancel" Text="取消" CssClass="btn" />
     </form>
    
-<div id="newPreview" style="width:200px;height:200px; "></div>  
 
-  <%--  <img src="../image/bg.jpg" />--%>
- <%--   <img src="C:/Users/YuanYuLing/Pictures/TB1Q4NNKXXXXXXeXpXXdtacIVXX-125-173_jpeg_q90.jpg" />
-     <img src="C:/Users/YuanYuLing/Pictures/img/img1.jpg" />--%>
-   <%-- <div style="width:200px; height:200px;background-image:url('C:/Users/YuanYuLing/Pictures/TB1Q4NNKXXXXXXeXpXXdtacIVXX-125-173_jpeg_q90.jpg')" ></div>--%>
-    <%--  <img src="E:/游戏/04.jpg" />
-      <img src="E:/游戏/img7.jpg" />--%>
-    <%-- <img src="../image/bg.jpg" />--%>
-    <%--  <img src="E:/毕业设计/TaoPiaoPiao4/ManageUI/image/login-bg-8.jpg" />--%>
-    <%--  <img src="../image/9f9fd69dd18c06cb8041935eebf1b3b5.jpg" />--%>
+
+ 
 </body>
 </html>

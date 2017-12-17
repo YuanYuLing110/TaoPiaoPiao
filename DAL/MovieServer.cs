@@ -23,12 +23,14 @@ namespace DAL
                   new SqlParameter("@m_image",movie.M_image),
                     new SqlParameter("@m_direct",movie.M_direct),
                       new SqlParameter("@m_star",movie.M_star),
-                        new SqlParameter("@m_type	",movie.M_type),
-                           new SqlParameter("@m_state ",movie.M_state),
+                        new SqlParameter("@m_type",movie.M_type),
+                           new SqlParameter("@m_state",movie.M_state),
                         new SqlParameter("@m_voice",movie.M_voice),
-                        new SqlParameter("@m_time	  ",movie.M_time),
+                        new SqlParameter("@m_time",movie.M_time),
                         new SqlParameter("@m_grade",movie.M_grade),
-                            new SqlParameter("@m_detail",movie.M_detail)
+                            new SqlParameter("@m_detail",movie.M_detail),
+                              new SqlParameter("@m_minute",movie.M_minute)
+                            
                      
                     };
             int i = DBHelper.ExecuteNonQuery("InsertMovie", CommandType.StoredProcedure, p);
@@ -62,6 +64,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
@@ -96,7 +99,7 @@ namespace DAL
             movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
             movie.M_detail = sdr["m_detail"].ToString();
             movie.M_count = int.Parse(sdr["m_count"].ToString());
-
+            movie.M_minute = int.Parse(sdr["m_minute"].ToString());
             sdr.Close();
             return movie;
         }
@@ -132,7 +135,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
-                    movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
@@ -167,6 +170,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
@@ -201,6 +205,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
@@ -236,6 +241,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
@@ -271,6 +277,7 @@ namespace DAL
                     movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
                     movie.M_detail = sdr["m_detail"].ToString();
                     movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
             }
