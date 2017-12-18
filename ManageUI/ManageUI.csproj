@@ -71,6 +71,8 @@
     <Content Include="CSS\login.css" />
     <Content Include="CSS\main.css" />
     <Content Include="CSS\MovieAddFrm.css" />
+    <Content Include="CSS\MovieCss.css" />
+    <Content Include="CSS\PianChangAdd.css" />
     <Content Include="CSS\Tianjia.css" />
     <Content Include="DianYingTing\DianYingTingFrm.aspx" />
     <Content Include="DianYingTing\DianYingTingTianJiaFrm.aspx" />
@@ -78,6 +80,8 @@
     <Content Include="JS\kalendae.standalone.js" />
     <Content Include="Movie\MovieAddFrm.aspx" />
     <Content Include="Movie\MovieFrm.aspx" />
+    <Content Include="PianChang\PianChangAddFrm.aspx" />
+    <Content Include="PianChang\PianChangFrm.aspx" />
     <Content Include="SuperManage\DianYingYuanEdit.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
@@ -197,6 +201,20 @@
     </Compile>
     <Compile Include="Movie\MovieFrm.aspx.designer.cs">
       <DependentUpon>MovieFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PianChang\PianChangAddFrm.aspx.cs">
+      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PianChang\PianChangAddFrm.aspx.designer.cs">
+      <DependentUpon>PianChangAddFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PianChang\PianChangFrm.aspx.cs">
+      <DependentUpon>PianChangFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PianChang\PianChangFrm.aspx.designer.cs">
+      <DependentUpon>PianChangFrm.aspx</DependentUpon>
     </Compile>
     <Compile Include="SuperManage\DianYingYuanEdit.aspx.cs">
       <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>

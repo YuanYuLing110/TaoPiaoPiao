@@ -107,7 +107,7 @@ namespace DAL
         /// <summary>
         ///查询指定时间上映的电影
         /// </summary>
-        public static List<Movie> search_NewMovie_byDate(DateTime dt)
+        public static List<Movie> search_NewMovie_byDate(string dt)
         {
 
             SqlParameter[] p = {
@@ -143,6 +143,20 @@ namespace DAL
             return list;
         }
 
+       /// <summary>
+        ///查询指定时间上映的电影
+        /// </summary>
+        public static SqlDataReader search_NewMovie_byDate_sr(string dt)
+        {
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@date",dt)
+                    };
+          
+            SqlDataReader sdr = DBHelper.ExecuteReader("search_NewMovie_byDate", CommandType.StoredProcedure, p);
+            return sdr;
+        }
+
         /// <summary>
         ///查询所以即将上映的电影
         /// </summary>
@@ -176,6 +190,17 @@ namespace DAL
             }
             sdr.Close();
             return list;
+        }
+
+
+        /// <summary>
+        ///查询所以即将上映的电影
+        /// </summary>
+        public static SqlDataReader searchComing_soonMovieAll_sr()
+        {
+            SqlDataReader sdr = DBHelper.ExecuteReader("searchComing_soonMovieAll", CommandType.StoredProcedure, null);
+
+            return sdr;
         }
 
         /// <summary>
@@ -285,8 +310,23 @@ namespace DAL
             return list;
         }
 
+       /// <summary>
+        ///搜索所以热门电影
+        /// </summary>
+        public static SqlDataReader searchHotMovieAll_sr() 
+        {
+            SqlDataReader sdr = DBHelper.ExecuteReader("searchHotMovieAll", CommandType.StoredProcedure, null);
+            return sdr;
+        }
 
-      
-
+        /// <summary>
+        ///搜索所以热门电影
+        /// </summary>
+        public static SqlDataReader searchMovieAll_sr()
+        {
+            string str = "select * from Movie";
+            SqlDataReader sdr = DBHelper.ExecuteReader(str, CommandType.Text, null);
+            return sdr;
+        }
     }
 }

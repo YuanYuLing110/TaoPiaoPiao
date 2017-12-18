@@ -63,7 +63,7 @@
                     <td>
                         <asp:TextBox runat="server" ID="m_star" CssClass="txt"></asp:TextBox></td>
                     <td>
-  <asp:RequiredFieldValidator  ControlToValidate="m_star"  ErrorMessage="导演名不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      
+  <asp:RequiredFieldValidator  ControlToValidate="m_star"  ErrorMessage="主演不能为空" ForeColor="Red"  Display="Dynamic"  runat="server" CssClass="verify"></asp:RequiredFieldValidator>                      
 
                     </td>
                 </tr>

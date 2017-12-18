@@ -1,0 +1,24 @@
+﻿body {
+    background-color:#ccc7c7
+}
+
+.lb {
+    height:20px;
+}
+
+label {
+    font-size:24px;
+    color:#570606;
+    margin-bottom:10px
+}
+
+.ddl {
+    width:200px;
+    height:30px;
+    border-radius:5px
+}
+.main {
+   margin-top:200px;
+   margin-left:300px;
+   
+}

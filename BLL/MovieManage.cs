@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,7 @@ namespace BLL
         /// <summary>
         ///查询指定时间上映的电影
         /// </summary>
-       public static List<Movie> search_NewMovie_byDate(DateTime dt)
+       public static List<Movie> search_NewMovie_byDate(string dt)
        {
            return DAL.MovieServer.search_NewMovie_byDate(dt);
        }
@@ -78,6 +79,38 @@ namespace BLL
        public static List<Movie> searchHotMovieAll()
        {
            return DAL.MovieServer.searchHotMovieAll();
+       }
+
+          /// <summary>
+        ///搜索所以热门电影
+        /// </summary>
+       public static SqlDataReader searchMovieAll_sr() {
+
+           return DAL.MovieServer.searchMovieAll_sr();
+       
+       }
+
+
+        /// <summary>
+        ///搜索所以热门电影
+        /// </summary>
+       public static SqlDataReader searchHotMovieAll_sr() {
+           return DAL.MovieServer.searchHotMovieAll_sr();
+       }
+
+          /// <summary>
+        ///查询所以即将上映的电影
+        /// </summary>
+       public static SqlDataReader searchComing_soonMovieAll_sr() {
+
+           return DAL.MovieServer.searchComing_soonMovieAll_sr();
+       }
+
+       /// <summary>
+        ///查询指定时间上映的电影
+        /// </summary>
+       public static SqlDataReader search_NewMovie_byDate_sr(string dt) {
+           return DAL.MovieServer.search_NewMovie_byDate_sr(dt);
        }
     }
 }
