@@ -31,22 +31,13 @@ namespace ManageUI.PianChang {
         protected global::System.Web.UI.WebControls.DropDownList ddl_pianChang;
         
         /// <summary>
-        /// DropDownList1 控件。
+        /// ddl_Coming 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// DropDownList2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Coming;
         
         /// <summary>
         /// m_time 控件。
@@ -58,22 +49,13 @@ namespace ManageUI.PianChang {
         protected global::System.Web.UI.HtmlControls.HtmlInputText m_time;
         
         /// <summary>
-        /// lb_hour 控件。
+        /// txt_hour 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lb_hour;
-        
-        /// <summary>
-        /// lb_mimutes 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lb_mimutes;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_hour;
         
         /// <summary>
         /// tb_price 控件。
@@ -83,5 +65,14 @@ namespace ManageUI.PianChang {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_price;
+        
+        /// <summary>
+        /// btn_Add 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Add;
     }
 }

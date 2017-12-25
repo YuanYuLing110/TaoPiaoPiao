@@ -328,5 +328,67 @@ namespace DAL
             SqlDataReader sdr = DBHelper.ExecuteReader(str, CommandType.Text, null);
             return sdr;
         }
+
+        public static int[] getArrayDay(DateTime dt)
+        {
+            int[] intArray = new int[31];
+            //从数据库里选取符合要求的记录，将日期存入数组
+            string strSql = "select m_time from movie group by m_time   having DATEDIFF(MONTH,@dt,m_time)=0 and DATEDIFF(DAY,@dt,m_time)>=0";
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@dt",dt)
+                    };
+            SqlDataReader dr = DBHelper.ExecuteReader(strSql,CommandType.Text,p);
+            int i = 0;
+            while (dr.Read())
+            {
+                if (i == 0)
+                {
+                    intArray[i] = Convert.ToDateTime(dr["m_time"].ToString()).Day;
+                    string a = Convert.ToString(intArray[i]);
+                    i++;
+                }
+                else if (Convert.ToDateTime(dr["m_time"].ToString()).Day != intArray[i - 1])
+                {
+                    intArray[i] = Convert.ToDateTime(dr["m_time"].ToString()).Day;
+                    i++;
+                }
+            }
+            //int[] Array = new int[i];
+            //for (int j = 0; j < i; i++)
+            //{
+            //    Array[j] = intArray[j];
+
+            //}
+            return intArray;
+        }
+
+        public static int[] getArrayDayNext(DateTime dt)
+        {
+            int[] intArray = new int[31];
+            //从数据库里选取符合要求的记录，将日期存入数组
+            string strSql = "select m_time from movie group by m_time   having DATEDIFF(MONTH,@dt,m_time)=0";
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@dt",dt)
+                    };
+            SqlDataReader dr = DBHelper.ExecuteReader(strSql, CommandType.Text,p);
+            int i = 0;
+            while (dr.Read())
+            {
+                if (i == 0)
+                {
+                    intArray[i] = Convert.ToDateTime(dr["m_time"].ToString()).Day;
+                    string a = Convert.ToString(intArray[i]);
+                    i++;
+                }
+                else if (Convert.ToDateTime(dr["m_time"].ToString()).Day != intArray[i - 1])
+                {
+                    intArray[i] = Convert.ToDateTime(dr["m_time"].ToString()).Day;
+                    i++;
+                }
+            }
+            return intArray;
+        }
     }
 }

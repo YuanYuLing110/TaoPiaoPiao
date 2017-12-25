@@ -62,36 +62,53 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\--kg-global-util-1.0.6-index-min.css,kg-tb-nav-2.4.1-index-min.css" />
+    <Content Include="CSS\--life-pc-movie-1.0.16-pages-footer-index.css" />
     <Content Include="CSS\--life-pc-movie-1.0.34-pages-header-index.less.css" />
     <Content Include="CSS\--mods-reset.css,mods-common.less.css" />
+    <Content Include="CSS\index.less.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\ZhuCe.css" />
+    <Content Include="getpic1.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
     <Content Include="image\05.jpg" />
+    <Content Include="image\98-email.png" />
     <Content Include="image\9f9fd69dd18c06cb8041935eebf1b3b5.jpg" />
     <Content Include="image\bg-right-status.png" />
     <Content Include="image\bg-wrong-status.png" />
     <Content Include="image\bg.jpg" />
     <Content Include="image\bo.png" />
+    <Content Include="image\chn_weibo.png" />
+    <Content Include="image\cloud10.png" />
     <Content Include="image\defaultImage.gif" />
     <Content Include="image\fh.png" />
     <Content Include="image\icon-slash.png" />
     <Content Include="image\icon.png" />
     <Content Include="image\login-bg-8.jpg" />
+    <Content Include="image\phone_on_32.png" />
     <Content Include="image\play.png" />
     <Content Include="image\playing.png" />
+    <Content Include="image\T1Vt8KFiRhXXXOFx6f-39-60.png" />
+    <Content Include="image\TB1JUFIJVXXXXXUXXXXJxQf.VXX-134-40.png" />
     <Content Include="image\zhan.jpg" />
     <Content Include="IMG\TB1LvHcSFXXXXcGaXXXXXXXXXXX-24-28.png" />
     <Content Include="IMG\TB1xkfzGpXXXXbcXXXXFtjPHpXX-18-302.png" />
     <Content Include="IMG\TB1zoNfJVXXXXbCXVXXgap8FVXX-150-72.png" />
+    <Content Include="index.html" />
     <Content Include="JS\--kissy-k-1.4.16-seed-min.js,kg-kmd-adapter-0.1.5-index.js,kg-kmd-adapter-0.1.5-util.js,kg-global-util-1.0.5-index-min.js,tb-tracker-4.0.1-p-index-index.js,kg-tb-nav-2.5.3-index-min.js" />
     <Content Include="JS\--mods-config.js" />
     <Content Include="JS\--template-city.js" />
+    <Content Include="JS\assets\Detector.js" />
+    <Content Include="JS\assets\three.min.js" />
+    <Content Include="JS\index.js" />
+    <Content Include="JS\jquery-1.3.2.min.js" />
     <Content Include="JS\jquery-2.2.0.js" />
+    <Content Include="JS\MyJuery.js" />
     <Content Include="JS\uab.js" />
     <Content Include="order\order.aspx" />
     <Content Include="Template.Master" />
+    <Content Include="Index.aspx" />
+    <Content Include="WebForm2.aspx" />
     <Content Include="ZhuCe.aspx" />
     <None Include="Properties\PublishProfiles\TaoPiao.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -115,6 +132,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="getpic1.aspx.cs">
+      <DependentUpon>getpic1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="order\order.aspx.cs">
       <DependentUpon>order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +160,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZhuCe.aspx.cs">
       <DependentUpon>ZhuCe.aspx</DependentUpon>
@@ -185,6 +220,7 @@
       <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

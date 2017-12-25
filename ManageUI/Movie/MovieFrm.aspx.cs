@@ -17,6 +17,8 @@ namespace ManageUI.Movie
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+            if(!IsPostBack)
+            { 
             sr = BLL.MovieManage.searchMovieAll_sr();
             //sr = BLL.MovieManage.search_NewMovie_byDate_sr("2017/12/18");
            
@@ -24,6 +26,7 @@ namespace ManageUI.Movie
             dt.Load(sr);
             Application["dt"] = dt;
             InitGridView();
+            }
         }
 
         protected void gv_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -71,7 +74,7 @@ namespace ManageUI.Movie
 
         void InitGridView()
         {
-            //dt = (DataTable)Application["dt"];
+            dt = (DataTable)Application["dt"];
             gv.DataSource = dt;
 
             gv.DataBind();
@@ -96,8 +99,9 @@ namespace ManageUI.Movie
             sr = BLL.MovieManage.search_NewMovie_byDate_sr(str);
             dt = new DataTable();
             dt.Load(sr);
+            Application["dt"] = dt;
             InitGridView();
-            //Application["dt"] = dt;
+            
             //InitGridView();
         }
     }

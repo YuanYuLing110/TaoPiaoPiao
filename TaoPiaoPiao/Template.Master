@@ -21,35 +21,57 @@
 .banner-sp-float {
 	display:none;
 }
-
+    .head-wrap {
+        width:100%;
+       position:fixed;
+     
+    }
+    #footer {
+        height:200px;
+        width:100%;
+        background-color:#000;
+        text-align:center;
+      padding-top:50px;
+    }
+    .email {
+        width:350px;
+        height:60px;
+         font-size:24px;
+        background-color:#1c9847;
+        color:#fff !important;
+     padding-top:10px;
+     margin-left:150px;
+    }
+    .phone1 {
+          width:350px;
+        height:60px;
+        background-color:#15aca9;
+        font-size:24px;
+        color:#fff !important;
+        padding-top:10px;
+       margin-left:150px;
+    }
+    .weibo {
+             width:350px;
+        height:60px;
+        background-color:#15aca9;
+        font-size:24px;
+        color:#fff !important;
+        padding-top:10px;
+       margin-left:150px;
+    }
+    li {
+        float:left;
+    }
 </style>
     <script src="JS/jquery-2.2.0.js"></script>
-  <%--  <script src="JS/--kissy-k-1.4.16-seed-min.js,kg-kmd-adapter-0.1.5-index.js,kg-kmd-adapter-0.1.5-util.js,kg-global-util-1.0.5-index-min.js,tb-tracker-4.0.1-p-index-index.js,kg-tb-nav-2.5.3-index-min.js"></script>
-    <script src="JS/--mods-config.js"></script>--%>
-  
-   <%-- <script src="JS/--template-city.js"></script>--%>
-    <script  type="text/javascript">
-        //alert("开始");
-        window.onload = function () {
-            var cityName = document.getElementById("cityName");
-            cityName.onmouseover= function () {
-                //alert("开始");
-                document.getElementById("cityList").style.display = "block";
-                cityName.style.border= "1px solid #ffffff";
-              
-            };
-            cityName.onmouseout = function () {
-                //alert("开始");
-                document.getElementById("cityList").style.display = "none";
-
-            };
-        };
-        //$(function(){
-        //    alert("开始");
-        //})
-    </script>
+ 
+  <%--  <script src="JS/jquery-1.3.2.min.js"></script>--%>
+    <script src="JS/MyJuery.js"></script>
+<%--    <script src="JS/index.js"></script>--%>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src="JS/jquery-1.3.2.min.js"></script>
 </head>
 <body>
 
@@ -129,6 +151,96 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+
+   <%--     <footer id="footer">
+            <ul>
+           <li><div class="email"> <img src="image/98-email.png" /><label> YuanYuLing110@126.com</label></div></li> 
+			
+			<li> <div class="phone1"> <img src="image/phone_on_32.png" /><label> 12345671111</label></div>	</li> 
+                	<li> <div class="weibo"> <img src="image/chn_weibo.png" /><label> 淘票票官微</label></div>	</li> 
+                </ul>
+			</footer>--%>
+        <link href="CSS/--life-pc-movie-1.0.16-pages-footer-index.css" rel="stylesheet" />
+<div class="footer" style="margin-top:0px">
+<div class="footWrap">
+<div class="footMiddle">
+<div class="footLogo">
+<a href="#"><img src="image/TB1JUFIJVXXXXXUXXXXJxQf.VXX-134-40.png" tppabs="https://gw.alicdn.com/tps/i1/TB1JUFIJVXXXXXUXXXXJxQf.VXX-134-40.png" /></a>
+<span>客服热线</span>
+<span>0571-88157838</span>
+</div>
+<dl>
+<dt>选座购票流程</dt>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.1&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.1&dkey=catview'" tppabs="https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.1&dkey=catview" target="_blank" title="选择影片和场次">选择影片和场次</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.2&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.2&dkey=catview'" tppabs="https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.2&dkey=catview" target="_blank" title="选择中意的座位">选择中意的座位</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.3&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.3&dkey=catview'" tppabs="https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.3&dkey=catview" target="_blank" title="支付并收到取票短信">支付并收到取票短信</a></dd>
+</dl>
+<dl>
+<dt>取票流程</dt>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.4&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.4&dkey=catview#1207263+d'" tppabs="https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.4&dkey=catview#1207263+d" target="_blank" title="收到取票短信">收到取票短信</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.5&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.5&dkey=catview#1207263+e'" tppabs="https://service.taobao.com/support/knowledge-1207263.htm?spm=a2406.1303970.a241y5.5&dkey=catview#1207263+e" target="_blank" title="影院自助取票">影院自助取票</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207265.htm?spm=a2406.1303970.a241y5.6  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207265.htm?spm=a2406.1303970.a241y5.6'" tppabs="https://service.taobao.com/support/knowledge-1207265.htm?spm=a2406.1303970.a241y5.6" target="_blank" title="短信重发方式">短信重发方式</a></dd>
+</dl>
+<dl>
+<dt>常见问题</dt>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207267.htm?spm=a2406.1303970.a241y5.7&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207267.htm?spm=a2406.1303970.a241y5.7&dkey=catview'" tppabs="https://service.taobao.com/support/knowledge-1207267.htm?spm=a2406.1303970.a241y5.7&dkey=catview" target="_blank" title="是否支持退换票">是否支持退换票</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/knowledge-1207266.htm?spm=a2406.1303970.a241y5.8&dkey=catview  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/knowledge-1207266.htm?spm=a2406.1303970.a241y5.8&dkey=catview'" tppabs="https://service.taobao.com/support/knowledge-1207266.htm?spm=a2406.1303970.a241y5.8&dkey=catview" target="_blank" title="填错手机号怎么办">填错手机号怎么办</a></dd>
+<dd><a href="javascript:if(confirm('https://service.taobao.com/support/8304287.htm?spm=a2406.1303970.a241y5.9  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/8304287.htm?spm=a2406.1303970.a241y5.9'" tppabs="https://service.taobao.com/support/8304287.htm?spm=a2406.1303970.a241y5.9" target="_blank" title="更多问题>>">更多问题>></a></dd>
+</dl>
+<dl>
+<dt>协议规范</dt>
+<dd><a href="javascript:if(confirm('https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=924&interact=no  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=924&interact=no'" tppabs="https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=924&interact=no" target="_blank" title="用户服务协议">用户服务协议</a></dd>
+<dd><a href="javascript:if(confirm('https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=1598&interact=no  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=1598&interact=no'" tppabs="https://h5.m.taopiaopiao.com/app/dianying/pages/alfheim/content.html?id=1598&interact=no" target="_blank" title="食品管理规范">食品管理规范</a></dd>
+</dl>
+<div class="order-code" style="background-image:url(//img.alicdn.com/tps/TB1OxfBKXXXXXbXXpXXXXXXXXXX-76-240.png);"></div>
+</div>
+<div class="footBottom">
+<img class="img" src="image/T1Vt8KFiRhXXXOFx6f-39-60.png" tppabs="https://img.alicdn.com/tps/i2/T1Vt8KFiRhXXXOFx6f-39-60.png">
+<div class="footer-ali">
+<a href="javascript:if(confirm('https://news.alibaba.com/specials/aboutalibaba/aligroup/index.html?spm=1.1000386.245549.1.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://news.alibaba.com/specials/aboutalibaba/aligroup/index.html?spm=1.1000386.245549.1.lsGIAa'" tppabs="https://news.alibaba.com/specials/aboutalibaba/aligroup/index.html?spm=1.1000386.245549.1.lsGIAa" data-spm-anchor-id="1.1000386.245549.1">阿里巴巴集团</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.alibaba.com/?spm=1.1000386.245549.2.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.alibaba.com/?spm=1.1000386.245549.2.lsGIAa'" tppabs="https://www.alibaba.com/?spm=1.1000386.245549.2.lsGIAa" data-spm-anchor-id="1.1000386.245549.2">阿里巴巴国际站</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.1688.com/?spm=1.1000386.245549.3.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.1688.com/?spm=1.1000386.245549.3.lsGIAa'" tppabs="https://www.1688.com/?spm=1.1000386.245549.3.lsGIAa" data-spm-anchor-id="1.1000386.245549.3">阿里巴巴中国站</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.aliexpress.com/?spm=1.1000386.245549.4.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.aliexpress.com/?spm=1.1000386.245549.4.lsGIAa'" tppabs="https://www.aliexpress.com/?spm=1.1000386.245549.4.lsGIAa" data-spm-anchor-id="1.1000386.245549.4">全球速卖通</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.taobao.com/index_global.php?spm=1.1000386.245549.5.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/index_global.php?spm=1.1000386.245549.5.lsGIAa'" tppabs="https://www.taobao.com/index_global.php?spm=1.1000386.245549.5.lsGIAa" data-spm-anchor-id="1.1000386.245549.5">淘宝网</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.tmall.com/?spm=1.1000386.245549.6.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.tmall.com/?spm=1.1000386.245549.6.lsGIAa'" tppabs="https://www.tmall.com/?spm=1.1000386.245549.6.lsGIAa" data-spm-anchor-id="1.1000386.245549.6">天猫</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://ju.taobao.com/?spm=1.1000386.245549.7.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://ju.taobao.com/?spm=1.1000386.245549.7.lsGIAa'" tppabs="https://ju.taobao.com/?spm=1.1000386.245549.7.lsGIAa" data-spm-anchor-id="1.1000386.245549.7">聚划算</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.etao.com/?spm=1.1000386.245549.8.lsGIAa&tbpm=t  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.etao.com/?spm=1.1000386.245549.8.lsGIAa&tbpm=t'" tppabs="https://www.etao.com/?spm=1.1000386.245549.8.lsGIAa&tbpm=t" data-spm-anchor-id="1.1000386.245549.8">一淘</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.alimama.com/?spm=1.1000386.245549.9.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.alimama.com/?spm=1.1000386.245549.9.lsGIAa'" tppabs="https://www.alimama.com/?spm=1.1000386.245549.9.lsGIAa" data-spm-anchor-id="1.1000386.245549.9">阿里妈妈</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.aliyun.com/?spm=1.1000386.245549.10.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.aliyun.com/?spm=1.1000386.245549.10.lsGIAa'" tppabs="https://www.aliyun.com/?spm=1.1000386.245549.10.lsGIAa" data-spm-anchor-id="1.1000386.245549.10">阿里云计算</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.yunos.com/?spm=1.1000386.245549.11.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.yunos.com/?spm=1.1000386.245549.11.lsGIAa'" tppabs="https://www.yunos.com/?spm=1.1000386.245549.11.lsGIAa" data-spm-anchor-id="1.1000386.245549.11">云OS</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.net.cn/?spm=1.1000386.245549.12.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.net.cn/?spm=1.1000386.245549.12.lsGIAa'" tppabs="https://www.net.cn/?spm=1.1000386.245549.12.lsGIAa" data-spm-anchor-id="1.1000386.245549.12">万网</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://cn.yahoo.com/?spm=1.1000386.245549.13.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://cn.yahoo.com/?spm=1.1000386.245549.13.lsGIAa'" tppabs="https://cn.yahoo.com/?spm=1.1000386.245549.13.lsGIAa" data-spm-anchor-id="1.1000386.245549.13">中国雅虎</a>
+<b>|</b>
+<a href="javascript:if(confirm('https://www.alipay.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.alipay.com/'" tppabs="https://www.alipay.com/" data-spm-anchor-id="1.1000386.245549.14">支付宝</a>
+</div>
+<div class="foot-nav">
+<a href="javascript:if(confirm('https://www.taobao.com/about/?spm=1.1000386.245549.15.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/about/?spm=1.1000386.245549.15.lsGIAa'" tppabs="https://www.taobao.com/about/?spm=1.1000386.245549.15.lsGIAa" data-spm-anchor-id="1.1000386.245549.15">关于淘宝</a>
+<a href="javascript:if(confirm('https://www.taobao.com/about/partners.php?spm=1.1000386.245549.16.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/about/partners.php?spm=1.1000386.245549.16.lsGIAa'" tppabs="https://www.taobao.com/about/partners.php?spm=1.1000386.245549.16.lsGIAa" data-spm-anchor-id="1.1000386.245549.16">合作伙伴</a>
+<a href="javascript:if(confirm('https://pro.taobao.com/?spm=1.1000386.245549.17.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pro.taobao.com/?spm=1.1000386.245549.17.lsGIAa'" tppabs="https://pro.taobao.com/?spm=1.1000386.245549.17.lsGIAa" data-spm-anchor-id="1.1000386.245549.17">营销中心</a>
+<a href="javascript:if(confirm('https://service.taobao.com/support/main/service_route.htm?spm=1.1000386.245549.18.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://service.taobao.com/support/main/service_route.htm?spm=1.1000386.245549.18.lsGIAa'" tppabs="https://service.taobao.com/support/main/service_route.htm?spm=1.1000386.245549.18.lsGIAa" data-spm-anchor-id="1.1000386.245549.18">联系客服</a>
+<a href="javascript:if(confirm('https://open.taobao.com/?spm=1.1000386.245549.19.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://open.taobao.com/?spm=1.1000386.245549.19.lsGIAa'" tppabs="https://open.taobao.com/?spm=1.1000386.245549.19.lsGIAa" data-spm-anchor-id="1.1000386.245549.19">开放平台</a>
+<a href="javascript:if(confirm('https://www.taobao.com/about/join.php?spm=1.1000386.245549.20.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/about/join.php?spm=1.1000386.245549.20.lsGIAa'" tppabs="https://www.taobao.com/about/join.php?spm=1.1000386.245549.20.lsGIAa" data-spm-anchor-id="1.1000386.245549.20">诚征英才</a>
+<a href="javascript:if(confirm('https://www.taobao.com/about/contact.php?spm=1.1000386.245549.21.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/about/contact.php?spm=1.1000386.245549.21.lsGIAa'" tppabs="https://www.taobao.com/about/contact.php?spm=1.1000386.245549.21.lsGIAa" data-spm-anchor-id="1.1000386.245549.21">联系我们</a>
+<a href="javascript:if(confirm('https://www.taobao.com/sitemap.php?spm=1.1000386.245549.22.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/sitemap.php?spm=1.1000386.245549.22.lsGIAa'" tppabs="https://www.taobao.com/sitemap.php?spm=1.1000386.245549.22.lsGIAa" data-spm-anchor-id="1.1000386.245549.22">网站地图</a>
+<a href="javascript:if(confirm('https://www.taobao.com/about/copyright.php?spm=1.1000386.245549.23.lsGIAa  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.taobao.com/about/copyright.php?spm=1.1000386.245549.23.lsGIAa'" tppabs="https://www.taobao.com/about/copyright.php?spm=1.1000386.245549.23.lsGIAa" data-spm-anchor-id="1.1000386.245549.23">法律声明</a>
+<span>&copy; 2017 Taopiaopiao.com 版权所有</span><br>增值电信业务经营许可证：沪B2-20170117 沪ICP备16050036号-1 <a href="javascript:if(confirm('https://files.alicdn.com/tpsservice/77ec1f5f3fad05922448509b048e47b4.pdf  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://files.alicdn.com/tpsservice/77ec1f5f3fad05922448509b048e47b4.pdf'" tppabs="https://files.alicdn.com/tpsservice/77ec1f5f3fad05922448509b048e47b4.pdf" target="_blank" title="营业执照"> 营业执照</a>
+</div>
+</div>
+</div>
+</div>
+
     </div>
     </form>
 </body>

@@ -43,6 +43,7 @@
     <Compile Include="DianYingYuanManage.cs" />
     <Compile Include="Manage_Manager.cs" />
     <Compile Include="MovieManage.cs" />
+    <Compile Include="PianChangManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserManager.cs" />
   </ItemGroup>

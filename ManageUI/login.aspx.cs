@@ -27,10 +27,11 @@ namespace ManageUI
         {
             string name = username.Text.Trim();
             string pwd = password.Text.Trim();
+            string pass = BLL.Manage_Manager.MD5(pwd);
 
-         
 
-            if (BLL.Manage_Manager.PanDuan_SuperManage(name, pwd)) {
+            if (BLL.Manage_Manager.PanDuan_SuperManage(name, pass))
+            {
                 Session["name"] = name;
                 Session["limit"] = "super";
                     Response.Redirect("~/Index.aspx");

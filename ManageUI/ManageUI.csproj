@@ -57,6 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap-theme.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\TaoPiaoPiao.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +71,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap-theme.css" />
+    <Content Include="assets\css\bootstrap-theme.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\github.min.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\screenshot-1.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\highlight.min.js" />
+    <Content Include="assets\js\html5shiv.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\respond.min.js" />
     <Content Include="CSS\--mods-reset.css,mods-common.less.css" />
     <Content Include="CSS\global-min.css" />
     <Content Include="CSS\kalendae.css" />
@@ -76,12 +96,25 @@
     <Content Include="CSS\Tianjia.css" />
     <Content Include="DianYingTing\DianYingTingFrm.aspx" />
     <Content Include="DianYingTing\DianYingTingTianJiaFrm.aspx" />
+    <Content Include="dist\bootstrap-clockpicker.css" />
+    <Content Include="dist\bootstrap-clockpicker.js" />
+    <Content Include="dist\bootstrap-clockpicker.min.css" />
+    <Content Include="dist\bootstrap-clockpicker.min.js" />
+    <Content Include="dist\jquery-clockpicker.css" />
+    <Content Include="dist\jquery-clockpicker.js" />
+    <Content Include="dist\jquery-clockpicker.min.css" />
+    <Content Include="dist\jquery-clockpicker.min.js" />
     <Content Include="image\img7.jpg" />
+    <Content Include="index.html" />
     <Content Include="JS\kalendae.standalone.js" />
     <Content Include="Movie\MovieAddFrm.aspx" />
     <Content Include="Movie\MovieFrm.aspx" />
     <Content Include="PianChang\PianChangAddFrm.aspx" />
     <Content Include="PianChang\PianChangFrm.aspx" />
+    <Content Include="RegisterPage.aspx" />
+    <Content Include="src\clockpicker.css" />
+    <Content Include="src\clockpicker.js" />
+    <Content Include="src\standalone.css" />
     <Content Include="SuperManage\DianYingYuanEdit.aspx" />
     <Content Include="image\03.jpg" />
     <Content Include="image\04.jpg" />
@@ -118,7 +151,7 @@
     <Content Include="image\zoom.png" />
     <Content Include="Index.aspx" />
     <Content Include="CSS\--life-pc-movie-1.0.24-pages-header-index.less.css" />
-    <Content Include="JS\--seajs-seajs-2.2.3-sea.js,seajs-seajs-combo-1.0.0-seajs-combo.js,seajs-seajs-style-1.0.2-seajs-style.js,seajs-seajs-log-1.0.0-seajs-log.js,jquery-jquery-1.7.2-jquery.js,gallery-json-1.0.3-json.js" />
+    <Content Include="JS\chang.js" />
     <Content Include="login.aspx" />
     <Content Include="SuperManage\DianYingYuan.aspx" />
     <Content Include="SuperManage\DianYingYuanAddFrm.aspx" />
@@ -167,6 +200,7 @@
     <Content Include="resources\scripts\jquery.wysiwyg.js" />
     <Content Include="resources\scripts\myJS.js" />
     <Content Include="resources\scripts\simpla.jquery.configuration.js" />
+    <Content Include="SuperManage\ManageFrm.aspx" />
     <Content Include="Web.config" />
     <Content Include="main.htm" />
     <Content Include="XML\Cities.xml" />
@@ -216,6 +250,13 @@
     <Compile Include="PianChang\PianChangFrm.aspx.designer.cs">
       <DependentUpon>PianChangFrm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SuperManage\DianYingYuanEdit.aspx.cs">
       <DependentUpon>DianYingYuanEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,6 +293,13 @@
       <DependentUpon>DianYingYuanAddFrm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperManage\ManageFrm.aspx.cs">
+      <DependentUpon>ManageFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperManage\ManageFrm.aspx.designer.cs">
+      <DependentUpon>ManageFrm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

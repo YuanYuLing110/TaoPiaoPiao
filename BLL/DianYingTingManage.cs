@@ -41,5 +41,15 @@ namespace BLL
             return DAL.DianYingTingServer.Insert_DianYingTing(dyt);
         
         }
+
+       /// <summary>
+        /// 根据电影院管理者查询电影厅
+        /// </summary>
+        /// <param name="m_name"></param>
+        /// <returns></returns>
+        public static List<DianYingTing> search_DianYingTing(string m_name)
+        {
+            return DAL.DianYingTingServer.search_DianYingTing(m_name);
+        }
     }
 }

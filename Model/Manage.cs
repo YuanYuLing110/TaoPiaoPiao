@@ -34,11 +34,18 @@ namespace Model //ĞŞ¸ÄÃû×Ö¿Õ¼ä
 			set { dianYingYuan_id = value; }
 		}
 	
-		private bool limit;
-		public bool Limit
+		private string limit;
+        public string Limit
 		{
 			get { return limit; }
 			set { limit = value; }
 		}
+
+        private string email;
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
 	}
 }

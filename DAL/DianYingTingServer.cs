@@ -13,7 +13,7 @@ public    class DianYingTingServer
     {
       
         /// <summary>
-        /// 根据电影院查询电影厅
+        /// 根据电影院管理者查询电影厅
         /// </summary>
         /// <param name="m_name"></param>
         /// <returns></returns>
@@ -26,6 +26,39 @@ public    class DianYingTingServer
             SqlDataReader sdr = DBHelper.ExecuteReader(sql, CommandType.Text, sp);
 
             return sdr;
+        }
+
+
+        /// <summary>
+        /// 根据电影院管理者查询电影厅
+        /// </summary>
+        /// <param name="m_name"></param>
+        /// <returns></returns>
+        public static List<DianYingTing> search_DianYingTing(string m_name)
+        {
+            List<DianYingTing> dyt = new List<DianYingTing>();
+
+            string sql = "select * from DianYingTing  where y_id=(select y_id  from Manage where name=@name)";
+            SqlParameter[] sp ={
+                      new SqlParameter("@name",m_name)         
+                               };
+            SqlDataReader sdr = DBHelper.ExecuteReader(sql, CommandType.Text, sp);
+            if (sdr.HasRows)
+            {
+                while (sdr.Read())
+                {
+                    DianYingTing dyy = new DianYingTing();
+                    dyy.Y_id = int.Parse(sdr["y_id"].ToString());
+                    dyy.T_id = int.Parse(sdr["t_id"].ToString());
+                    dyy.T_name= sdr["t_Name"].ToString();
+                    dyy.T_line = int.Parse(sdr["t_line"].ToString());
+                    dyy.T_row = int.Parse(sdr["t_row"].ToString());
+                    dyy.T_count = int.Parse(sdr["t_count"].ToString());
+                   
+                    dyt.Add(dyy);
+                }
+            }
+            return dyt;
         }
 
 

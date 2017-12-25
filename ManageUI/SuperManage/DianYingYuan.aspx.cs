@@ -18,23 +18,23 @@ namespace ManageUI
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-            sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
-          
-            //sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr("成都市");
-            dt = new DataTable();
-            dt.Load(sr);
-            Application["dt"] = dt;
-            bind();
-         List<string> proList=   DAL.CityServer.getProvice();
-            foreach (string st in proList)
-            {
-              ddl_Sheng.Items.Add(st);
-            }
+            
+      
        
-            if (IsPostBack)
+            if (!IsPostBack)
             {
+                List<string> proList = DAL.CityServer.getProvice();
+                foreach (string st in proList)
+                {
+                    ddl_Sheng.Items.Add(st);
+                }
+                sr = BLL.DianYingYuanManage.search_DianYingYuan_All();
 
-               
+                //sr = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll_sr("成都市");
+                dt = new DataTable();
+                dt.Load(sr);
+                Application["dt"] = dt;
+                bind();
 
             }
           
@@ -114,7 +114,7 @@ namespace ManageUI
                 dt = new DataTable();
                dt.Load(sr);
                Application["dt"] = dt;
-               this.gv.PageIndex = 0;
+              
                bind();
                
 
@@ -126,7 +126,7 @@ namespace ManageUI
                 dt = new DataTable();
                 dt.Load(sr);
                 Application["dt"] = dt;
-               this.gv.PageIndex = 0;
+              
                 bind();
                
 

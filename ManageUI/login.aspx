@@ -13,6 +13,29 @@
 <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
 <link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />
 
+    <style>
+     
+        #remember-password {
+            width:150px;
+        }
+
+      /*#remember-password  #zhuce {
+
+           color:blue;
+        }*/
+        a :hover {
+            color:red
+        }
+        a:link {
+          color:#2e377e
+        }
+        a:active {
+            color:red
+        }
+        a {
+            color:#2e377e
+        }
+    </style>
 </head>
 <body id="login">
     <form id="form1" runat="server">
@@ -39,9 +62,15 @@
              <asp:TextBox ID="password" CssClass="text-input" runat="server" TextMode="Password" ></asp:TextBox>
       </p>
       <div class="clear"></div>
-      <p id="remember-password">
-        <input type="checkbox" />
+     
+          
+           <p id="remember-password">
+          <a href="RegisterPage.aspx" id="zhuce" >注册</a>
+               &nbsp;  &nbsp;  &nbsp; &nbsp;
+        <input type="checkbox" id="mima" />
        记住密码 </p>
+      
+     
       <div class="clear"></div>
       <p>
        <%-- <input class="button" type="submit" value="Sign In" />--%>
