@@ -5,12 +5,12 @@
     <script src="JS/MyJuery.js"></script>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- <asp:ScriptManager runat="server"></asp:ScriptManager>--%>
-    
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     
      <script type="text/javascript">
-        
        
-    </script>
+       
+     </script>
     <style type="text/css">
         .otherMonthDay {
            visibility:hidden
@@ -48,6 +48,7 @@
     </style>
       <div id="head">
         <label>淘你所想，看你想看</label>
+        
     </div>
     <div id="M-banner" class="banner-wrap">
      
@@ -134,9 +135,11 @@
             <ul class='movie-calender-main M-calender-main'>
             </ul>
         </div>--%>
-   <%--  <asp:UpdatePanel runat="server">
-         <ContentTemplate>--%>
-     <asp:Calendar ID="Calendar1"    format="yyyy-mm-dd"   runat="server" OnDayRender="Calendar1_DayRender" onvisiblemonthchanged="Calendar1_VisibleMonthChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="16px" ForeColor="Black" Height="300px" Width="400px" >
+     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    
+         <ContentTemplate>
+            <asp:Button ID="btn_chaxun"  runat="server" OnClick="btn_chaxun_Click" Text="查询" /> 
+     <asp:Calendar ID="Calendar1"    format="yyyy-mm-dd"   runat="server" OnDayRender="Calendar1_DayRender" onvisiblemonthchanged="Calendar1_VisibleMonthChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="16px" ForeColor="Black" Height="300px" Width="400px" OnSelectionChanged="Calendar1_SelectionChanged1"  >
          <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
          <NextPrevStyle VerticalAlign="Bottom" />
          <OtherMonthDayStyle CssClass="otherMonthDay" ForeColor="#808080" />
@@ -146,9 +149,8 @@
          <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
          <WeekendDayStyle BackColor="#FFFFCC" />
         </asp:Calendar>
-          <%--   </ContentTemplate>
-</asp:UpdatePanel>--%>
-        <div class='movie-post M-post'>
+
+              <div class='movie-post M-post' id="movie_post" runat="server">
 
             <div class='movie-post-main'>
                  <a target="_blank" href="#">
@@ -161,13 +163,18 @@
                         <span class='movie-rank'>&#9733;&#9733;&#9733;&#9733;&#9733;<i class='M-post-rank'>&#9733;&#9733;&#9733;&#9733;&#9733;</i></span>
                     </h3>
                 </a>
-            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <div class='movie-post-footer'>
                 <em class='prev M-post-prev'>&#60;</em>
-                <span class='day-info M-post-day-info'></span>
+                <span class='day-info M-post-day-info' runat="server" id="time_info"></span>
                 <em class='next M-post-next'>&#62;</em>
             </div>
         </div>
+               
+           </ContentTemplate>
+   
+</asp:UpdatePanel>
+    
     </div>
 
 	<!-- 热门预告片 -->

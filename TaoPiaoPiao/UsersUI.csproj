@@ -105,6 +105,7 @@
     <Content Include="JS\jquery-2.2.0.js" />
     <Content Include="JS\MyJuery.js" />
     <Content Include="JS\uab.js" />
+    <Content Include="newMovieFrm.aspx" />
     <Content Include="order\order.aspx" />
     <Content Include="Template.Master" />
     <Content Include="Index.aspx" />
@@ -135,6 +136,13 @@
     <Compile Include="getpic1.aspx.cs">
       <DependentUpon>getpic1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newMovieFrm.aspx.cs">
+      <DependentUpon>newMovieFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newMovieFrm.aspx.designer.cs">
+      <DependentUpon>newMovieFrm.aspx</DependentUpon>
     </Compile>
     <Compile Include="order\order.aspx.cs">
       <DependentUpon>order.aspx</DependentUpon>

@@ -1,0 +1,275 @@
+.movie-guide-info {
+  font-family: #eb002a;
+  font-size: 20px;
+  line-height: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px
+}
+
+.movie-calender {
+  opacity: 0;
+  width: 424px;
+  height: 372px;
+  float: left;
+  background: #f4f4f4
+}
+
+.movie-calender .movie-calender-header {
+  height: 118px;
+  background: #e5e5e5;
+  border-top: 1px solid #e5e5e5
+}
+
+.movie-calender .movie-calender-header .movie-calender-month {
+  color: #333;
+  margin-top: 28px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 38px
+}
+
+.movie-calender .movie-calender-header .movie-calender-month .movie-ctrl-show {
+  width: 135px;
+  display: inline-block;
+  text-align: center
+}
+
+.movie-calender .movie-calender-header .movie-calender-month .movie-ctrl-next,.movie-calender .movie-calender-header .movie-calender-month .movie-ctrl-prev {
+  cursor: pointer
+}
+
+.movie-calender .movie-calender-header .movie-calender-month .movie-ctrl-next.disable,.movie-calender .movie-calender-header .movie-calender-month .movie-ctrl-prev.disable {
+  color: #ccc
+}
+
+.movie-calender .movie-calender-header .movie-calender-week {
+  margin-left: 37px;
+  height: 40px;
+  list-style: none;
+  color: #3e3e3e;
+  line-height: 40px
+}
+
+.movie-calender .movie-calender-header .movie-calender-week li {
+  float: left;
+  font-size: 14px;
+  list-style: none;
+  height: 40px;
+  line-height: 40px;
+  width: 50px;
+  text-align: center
+}
+
+.movie-calender .movie-calender-main {
+  margin: 6px 0 6px 37px;
+  height: 242px
+}
+
+.movie-calender .movie-calender-main li {
+  float: left;
+  font-size: 16px;
+  list-style: none;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 5px;
+  width: 40px;
+  text-align: center;
+  color: #a0a0a0
+}
+
+.movie-calender .movie-calender-main li:after {
+  content: "";
+  width: 40px;
+  height: 0;
+  display: block;
+  position: absolute
+}
+
+.movie-calender .movie-calender-main li.active {
+  color: #eb002a;
+  cursor: pointer
+}
+
+.movie-calender .movie-calender-main li.current {
+  -webkit-animation: fanzhuan .5s;
+  -moz-animation: fanzhuan .5s;
+  animation: fanzhuan .5s;
+  background: #eb002a;
+  color: #fff;
+  cursor: pointer
+}
+
+.movie-post {
+  opacity: 0;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  height: 372px;
+  width: 220px;
+  background: #000
+}
+
+.movie-post .movie-post-main {
+  height: 330px;
+  width: 220px;
+  position: relative;
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  transform: translateZ(20px);
+  z-index: 200
+}
+
+.movie-post .movie-post-main .movie-post-mask,.movie-post .movie-post-main .movie-post-mask-list {
+  top: 0;
+  left: 0;
+  -webkit-transition: all .2s ease-out;
+  -webkit-transform: translateY(-50px);
+  opacity: 0;
+  filter: alpha(opacity=0)
+}
+
+.movie-post .movie-post-main a:hover {
+  text-decoration: none
+}
+
+.movie-post .movie-post-main .movie-post-img {
+  height: 330px;
+  width: 220px;
+  -webkit-mask-image: -webkit-linear-gradient(top,#142842 60%,transparent 120%,transparent)
+}
+
+.movie-post .movie-post-main .movie-post-mask {
+  position: absolute;
+  width: 220px;
+  height: 330px;
+  color: #919191;
+  overflow: hidden;
+  background-color: #000
+}
+
+.movie-post .movie-post-main .movie-post-mask-info {
+  width: 188px;
+  margin: 0 16px;
+  line-height: 36px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 36px;
+  font-size: 16px
+}
+
+.movie-post .movie-post-main .movie-post-mask-info .movie-name {
+  height: 36px;
+  float: left;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+  display: inline-block
+}
+
+.movie-post .movie-post-main .movie-post-mask-info .movie-rank {
+  position: relative;
+  float: right;
+  height: 36px;
+  text-align: left;
+  display: inline-block;
+  width: 71px;
+  color: #fff
+}
+
+.movie-post .movie-post-main .movie-post-mask-info .movie-rank i {
+  width: 50%;
+  top: 0;
+  left: 0;
+  font-style: normal;
+  position: absolute;
+  display: block;
+  height: 36px;
+  color: #eb002a;
+  overflow: hidden
+}
+
+.movie-post .movie-post-main .movie-post-mask-list {
+  position: absolute;
+  padding-left: 35px;
+  padding-top: 80px;
+  color: #ccc;
+  line-height: 30px;
+  font-size: 14px
+}
+
+.movie-post .movie-post-main .movie-post-mask-list li {
+  clear: both
+}
+
+.movie-post .movie-post-main .movie-post-mask-list em {
+  display: block;
+  float: left;
+  padding: 0 4px
+}
+
+.movie-post .movie-post-main .movie-post-mask-list span {
+  display: block;
+  float: left;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 4px
+}
+
+.movie-post .movie-post-main:hover .movie-post-mask-list {
+  -webkit-transform: translateY(0)!important;
+  opacity: 1!important;
+  filter: alpha(opacity=100)
+}
+
+.movie-post .movie-post-main:hover .movie-post-mask {
+  -webkit-transform: translateY(0)!important;
+  opacity: .5!important;
+  filter: alpha(opacity=50)
+}
+
+.movie-post .movie-post-footer {
+  height: 42px;
+  background: #eb002a;
+  color: #fff;
+  line-height: 42px;
+  font-size: 14px;
+  width: 220px;
+  text-align: center;
+  clear: both
+}
+
+.movie-post .movie-post-footer .day-info {
+  height: 42px;
+  float: left;
+  width: 168px;
+  _width: 180px;
+  display: block
+}
+
+.movie-post .movie-post-footer .prev {
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin-left: 14px;
+  _margin-left: 5px
+}
+
+.movie-post .movie-post-footer .next {
+  display: block;
+  float: right;
+  cursor: pointer;
+  margin-right: 14px;
+  _margin-right: 5px
+}
+
+.movie-post .movie-post-footer .next.disable,.movie-post .movie-post-footer .prev.disable {
+  cursor: default;
+  color: #eb002a
+}
+

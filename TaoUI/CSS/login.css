@@ -1,0 +1,31 @@
+﻿body {background: url(image/login-bg-8.jpg) no-repeat center center fixed;background-size:100% 100%;background-size:cover;-moz-background-size:cover}
+#main {
+  height:400px;background-color:rgba(252, 245, 235,0.5);width:500px;border-radius: 10px;color: aliceblue;
+  position:relative;
+}
+
+.layui-input {
+    width:300px;height:40px;font-size:20px;margin-top:20px;margin-left:100px;
+}
+
+.btn {
+    background-color:rgb(128, 189, 140);margin-top:20px;margin-left:100px;
+}
+ul {
+    list-style:none;
+}
+a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
+}
+a:hover{
+ text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+.pnl {
+    height:50px;width:200px;margin-left:150px;margin-top:50px;z-index:5;
+    position:absolute;background-color:white;
+    font-size:16px;color:black
+}
+.verify {
+  font-size:20px;
+   margin-left:100px
+}

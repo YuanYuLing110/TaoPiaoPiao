@@ -47,6 +47,7 @@ namespace DAL
                  catch(SystemException ex)
                 {
                     conn.Close();
+                    conn.Dispose();
                     throw ex;
                  }
             }
@@ -77,6 +78,7 @@ namespace DAL
                 catch (SystemException ex)
                 {
                     conn.Close();
+                    conn.Dispose();
                     throw ex;
                 }
             }
@@ -106,6 +108,7 @@ namespace DAL
             catch (SystemException ex)
             {
                 conn.Close();
+                conn.Dispose();
                 throw ex;
             }
         }
