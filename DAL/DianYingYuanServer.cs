@@ -165,6 +165,7 @@ namespace DAL
                     dyy.Y_address = sdr["y_address"].ToString();
                     dyy.Y_phone = sdr["y_phone"].ToString();
                     dyy.Y_provice = sdr["y_provice"].ToString();
+                    dyy.Y_grade = Convert.ToDouble(sdr["y_grade"].ToString());
                     dyy.Y_city = sdr["y_city"].ToString();
                     dyy.Y_area = sdr["y_area"].ToString();
                     list.Add(dyy);

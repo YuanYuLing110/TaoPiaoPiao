@@ -124,8 +124,8 @@
                     <li class="J_NavItem " id="movie" >
                     	<a href="MovieFrm.aspx" tppabs="https://dianying.taobao.com/showList.htm?n_s=new" target="_top">影片</a>
                     </li>
-    				 <li class="J_NavItem ">
-                    	<a href="cinemaList.htm-n_s=new.htm" tppabs="https://dianying.taobao.com/cinemaList.htm?n_s=new" target="_top">影院</a>
+    				 <li class="J_NavItem " id="cinema">
+                    	<a href="cinemaList.aspx" tppabs="https://dianying.taobao.com/cinemaList.htm?n_s=new" target="_top">影院</a>
                     </li>
 
                   				            </ul>
