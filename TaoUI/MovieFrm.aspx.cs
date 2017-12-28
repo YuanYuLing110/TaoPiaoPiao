@@ -36,6 +36,7 @@ public partial class _Default : System.Web.UI.Page
         //加入两个链接
         HtmlGenericControl a = new HtmlGenericControl("a");
         a.Attributes.Add("class", "movie-card");
+        a.Attributes.Add("href", "showDetail.aspx?movieID="+e.M_id);
         #region 照片
         HtmlGenericControl poster = new HtmlGenericControl("div");
         poster.Attributes.Add("class", "movie-card-poster");
@@ -106,6 +107,7 @@ public partial class _Default : System.Web.UI.Page
         #region 选座购票
         HtmlGenericControl a_order = new HtmlGenericControl("a");
         a_order.Attributes.Add("class", "movie-card-buy");
+        a_order.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         a_order.InnerText = "选座购票";
         hgg_div.Controls.Add(a_order);
         #endregion
@@ -126,6 +128,7 @@ public partial class _Default : System.Web.UI.Page
         //加入两个链接
         HtmlGenericControl a = new HtmlGenericControl("a");
         a.Attributes.Add("class", "movie-card");
+        a.Attributes.Add("href", "showDetail.aspx?movieID="+e.M_id);
         #region 照片
         HtmlGenericControl poster = new HtmlGenericControl("div");
         poster.Attributes.Add("class", "movie-card-poster");
@@ -196,7 +199,7 @@ public partial class _Default : System.Web.UI.Page
         #region 选座购票
         HtmlGenericControl a_order = new HtmlGenericControl("a");
         a_order.Attributes.Add("class", "movie-card-soon");
-
+        a_order.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         DateTime dt = Convert.ToDateTime(e.M_time);
 
         a_order.InnerText = "上映时间："+dt.ToShortDateString().ToString();

@@ -83,24 +83,30 @@ namespace DAL
                         new SqlParameter("@id",id)
                     };
             SqlDataReader sdr = DBHelper.ExecuteReader("search_Movie_byId", CommandType.StoredProcedure, p);
-
             Movie movie = new Movie();
-            movie.M_id = int.Parse(sdr["m_id"].ToString());
-            movie.M_name = sdr["m_Name"].ToString();
-            movie.M_image = (byte[])sdr["m_image"];
-            movie.M_direct = sdr["m_direct"].ToString();
-            movie.M_star = sdr["m_star"].ToString();
-            movie.M_type = sdr["m_type"].ToString();
-            movie.M_state = sdr["m_state"].ToString();
-            movie.M_voice = sdr["m_voice"].ToString();
-            movie.M_state = sdr["m_state"].ToString();
-            movie.M_voice = sdr["m_voice"].ToString();
-            movie.M_time = sdr["m_time"].ToString();
-            movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
-            movie.M_detail = sdr["m_detail"].ToString();
-            movie.M_count = int.Parse(sdr["m_count"].ToString());
-            movie.M_minute = int.Parse(sdr["m_minute"].ToString());
-            sdr.Close();
+
+            if (sdr.Read())
+                {
+
+                  
+                    movie.M_id = int.Parse(sdr["m_id"].ToString());
+                    movie.M_name = sdr["m_Name"].ToString();
+                    movie.M_image = (byte[])sdr["m_image"];
+                    movie.M_direct = sdr["m_direct"].ToString();
+                    movie.M_star = sdr["m_star"].ToString();
+                    movie.M_type = sdr["m_type"].ToString();
+                    movie.M_state = sdr["m_state"].ToString();
+                    movie.M_voice = sdr["m_voice"].ToString();
+                    movie.M_state = sdr["m_state"].ToString();
+                    movie.M_voice = sdr["m_voice"].ToString();
+                    movie.M_time = sdr["m_time"].ToString();
+                    movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
+                    movie.M_detail = sdr["m_detail"].ToString();
+                    movie.M_count = int.Parse(sdr["m_count"].ToString());
+                    movie.M_minute = int.Parse(sdr["m_minute"].ToString());
+                   
+                }
+               sdr.Close();
             return movie;
         }
 
@@ -116,8 +122,7 @@ namespace DAL
                     };
             List<Movie> list = new List<Movie>();
             SqlDataReader sdr = DBHelper.ExecuteReader("search_NewMovie_byDate", CommandType.StoredProcedure, p);
-            if (sdr.HasRows)
-            {
+           
                 while (sdr.Read())
                 {
                     Movie movie = new Movie();
@@ -138,7 +143,7 @@ namespace DAL
                     movie.M_minute = int.Parse(sdr["m_minute"].ToString());
                     list.Add(movie);
                 }
-            }
+         
             sdr.Close();
             return list;
         }

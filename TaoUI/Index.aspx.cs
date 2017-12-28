@@ -66,6 +66,7 @@ public partial class Default2 : System.Web.UI.Page
         //加入两个链接
         HtmlGenericControl a = new HtmlGenericControl("a");
         a.Attributes.Add("class", "movie-card");
+        a.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         #region 照片
         HtmlGenericControl poster = new HtmlGenericControl("div");
         poster.Attributes.Add("class", "movie-card-poster");
@@ -136,6 +137,7 @@ public partial class Default2 : System.Web.UI.Page
         #region 选座购票
         HtmlGenericControl a_order = new HtmlGenericControl("a");
         a_order.Attributes.Add("class", "movie-card-buy");
+        a_order.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         a_order.InnerText = "选座购票";
         hgg_div.Controls.Add(a_order);
         #endregion
@@ -157,6 +159,7 @@ public partial class Default2 : System.Web.UI.Page
         //加入两个链接
         HtmlGenericControl a = new HtmlGenericControl("a");
         a.Attributes.Add("class", "movie-card");
+        a.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         #region 照片
         HtmlGenericControl poster = new HtmlGenericControl("div");
         poster.Attributes.Add("class", "movie-card-poster");
@@ -227,7 +230,7 @@ public partial class Default2 : System.Web.UI.Page
         #region 选座购票
         HtmlGenericControl a_order = new HtmlGenericControl("a");
         a_order.Attributes.Add("class", "movie-card-soon");
-
+        a_order.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         DateTime dt = Convert.ToDateTime(e.M_time);
 
         a_order.InnerText = dt.ToShortDateString().ToString();
@@ -256,7 +259,7 @@ public partial class Default2 : System.Web.UI.Page
         span.Attributes.Add("class", "poster");
 
         HtmlGenericControl a = new HtmlGenericControl("a");
-
+        a.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         Image image = new Image();
         image.Width = 80;
         image.Height = 90;
@@ -269,6 +272,7 @@ public partial class Default2 : System.Web.UI.Page
         li.Controls.Add(span);
 
         HtmlGenericControl a2 = new HtmlGenericControl("a");
+        a2.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         a2.Attributes.Add("class", "name");
         a2.InnerText = e.M_name;
         li.Controls.Add(a2);
@@ -281,6 +285,7 @@ public partial class Default2 : System.Web.UI.Page
         HtmlGenericControl span3 = new HtmlGenericControl("span");
         span3.Attributes.Add("class", "buynow");
         HtmlGenericControl a3 = new HtmlGenericControl("a");
+        a3.Attributes.Add("href", "showDetail.aspx?movieID=" + e.M_id);
         a3.Attributes.Add("class", "buy");
         a3.InnerText = "选座购票";
 
@@ -423,7 +428,7 @@ public partial class Default2 : System.Web.UI.Page
 
         HtmlGenericControl a = new HtmlGenericControl("a");
         a.Attributes.Add("target", "_blank");
-
+        a.Attributes.Add("href", "showDetail.aspx?movieID=" + listmovie[0].M_id);
         Image img = new Image();
         img.ImageUrl = "getpic1.aspx?id=" + listmovie[0].M_id;
         img.Attributes.Add("class", "movie-post-img");
