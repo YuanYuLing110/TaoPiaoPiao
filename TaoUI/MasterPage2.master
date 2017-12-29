@@ -69,36 +69,8 @@
 <%--    <script src="JS/index.js"></script>--%>
   
     <script src="JS/jquery-1.3.2.min.js"></script>
-    <script type="text/javascript">
-        function showdatepicker() {
-       
-        }
-
-      
-    </script> 
-
-       <script type="text/javascript">
-           $(function () {
-               showdatepicker( );
-             
-           });
-       
-</script> 
-
-    <script type="text/javascript"> 
-function load(){ 
-Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler); 
-} 
-function EndRequestHandler() { 
-showdatepicker(); 
-} 
-        </script>
-
- 
-
- 
 </head>
-<body onload="load()">
+<body>
     <form id="form1" runat="server">
     <div>
          <div class="head-wrap" data-spm="header">

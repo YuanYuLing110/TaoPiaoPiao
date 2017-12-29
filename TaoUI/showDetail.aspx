@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage2.master" AutoEventWireup="true" CodeFile="showDetail_Abandon.aspx.cs" Inherits="showDetail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage2.master" AutoEventWireup="true" CodeFile="showDetail.aspx.cs" Inherits="showDetail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="CSS/--pages-movie_detail-index.less.css,mods-list-title.less.css,mods-list-filter.less.css,mods-list-hall.less.css,mods-list-custtop.less.css,pages-movie_detail-comment.less.css" rel="stylesheet" />
