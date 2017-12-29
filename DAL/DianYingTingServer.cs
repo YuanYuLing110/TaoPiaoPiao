@@ -19,7 +19,7 @@ public    class DianYingTingServer
         /// <returns></returns>
         public static SqlDataReader search_DianYingTing_All(string m_name)
         {
-            string sql = "select * from DianYingTing  where y_id=(select y_id  from Manage where name=@name)";
+            string sql = "select * from DianYingTing  where y_id=(select DianYingYuan_id  from Manage where name=@name)";
             SqlParameter[] sp ={
                       new SqlParameter("@name",m_name)         
                                };
@@ -38,7 +38,7 @@ public    class DianYingTingServer
         {
             List<DianYingTing> dyt = new List<DianYingTing>();
 
-            string sql = "select * from DianYingTing  where y_id=(select y_id  from Manage where name=@name)";
+            string sql = "select * from DianYingTing  where y_id=(select DianYingYuan_id  from Manage where name=@name)";
             SqlParameter[] sp ={
                       new SqlParameter("@name",m_name)         
                                };

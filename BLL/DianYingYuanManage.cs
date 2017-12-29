@@ -30,6 +30,16 @@ namespace BLL
         return  DAL.DianYingYuanServer.search_DianYingYuan_idl(id);
       }
 
+       /// <summary>
+        ///根据电影院名查询电影详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+      public static DianYingYuan search_DianYingYuan_name(string name)
+      {
+          return DAL.DianYingYuanServer.search_DianYingYuan_name(name);
+      }
+
       ///删除电影院，指定id
       /// </summary>
       /// <param name="ddy"></param>

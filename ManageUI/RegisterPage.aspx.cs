@@ -113,15 +113,18 @@ namespace ManageUI
             {
                 if (BLL.Manage_Manager.addManage(manage))
                     Utility.JavaScript.Alert("注册成功，通过审核将发送至你的邮箱",this);
+                Response.Redirect("~/login.aspx");
+                
 
             }
             else
                 Utility.JavaScript.Alert("该用户以存在", this);
+
         }
 
         protected void btn_fanhui_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/login.aspx");
         }
     }
 }

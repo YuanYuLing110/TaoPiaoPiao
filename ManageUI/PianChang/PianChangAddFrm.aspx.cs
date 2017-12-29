@@ -12,51 +12,56 @@ namespace ManageUI.PianChang
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Session["name"] = "yyl02";
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-            Session["name"] = "yyl01";
-            if (Object.Equals(Session["name"], null))
-            {//判断在Session["AdminName"]是否存在值
-                Utility.JavaScript.AlertAndRedirect("请登录", "..//login.aspx", this);
-            }
-            else
+            if (!IsPostBack)
             {
-
-                string AdminName = Session["name"].ToString();
-
-              //int  y_id = BLL.DianYingYuanManage.search_DianYingYuanId_byM_name(AdminName);
-
-
-                ddl_Coming.Items.Clear();
-                List<Model.Movie> comingList = BLL.MovieManage.searchHotMovieAll();
-                //ddl_Coming.
-                for (int i = 0; i < comingList.Count; i++)
-                {
-                    string m_name = comingList[i].M_name.ToString();
-                    int m_id = comingList[i].M_id;
-                    ListItem li = new ListItem();
-                    li.Text = m_name;
-                    li.Value = m_id.ToString();
-                    ddl_Coming.Items.Add(li);
-                    //ddl_Coming.Items.Add();
-
+                if (Object.Equals(Session["name"], null))
+                {//判断在Session["AdminName"]是否存在值
+                    Utility.JavaScript.AlertAndRedirect("请登录", "..//login.aspx", this);
                 }
-
-                ddl_pianChang.Items.Clear();
-                List<Model.DianYingTing> dytList = BLL.DianYingTingManage.search_DianYingTing(AdminName);
-
-                for (int i = 0; i < dytList.Count; i++)
+                else
                 {
-                    string t_name = dytList[i].T_name.ToString();
-                    int t_id =  dytList[i].T_id;
-                    ListItem li = new ListItem();
-                    li.Text = t_name;
-                    li.Value = t_id.ToString();
-                    ddl_pianChang.Items.Add(li);
-                    //ddl_Coming.Items.Add();
 
+                    string AdminName = Session["name"].ToString();
+
+                    //int  y_id = BLL.DianYingYuanManage.search_DianYingYuanId_byM_name(AdminName);
+
+
+                    ddl_Coming.Items.Clear();
+                    List<Model.Movie> comingList = BLL.MovieManage.searchHotMovieAll();
+                    //ddl_Coming.
+                    for (int i = 0; i < comingList.Count; i++)
+                    {
+                        string m_name = comingList[i].M_name.ToString();
+                        int m_id = comingList[i].M_id;
+                        ListItem li = new ListItem();
+                        li.Text = m_name;
+                        li.Value = m_id.ToString();
+                        ddl_Coming.Items.Add(li);
+                        //ddl_Coming.Items.Add();
+
+                    }
+
+                    ddl_pianChang.Items.Clear();
+                    List<Model.DianYingTing> dytList = BLL.DianYingTingManage.search_DianYingTing(AdminName);
+
+                    for (int i = 0; i < dytList.Count; i++)
+                    {
+                        string t_name = dytList[i].T_name.ToString();
+                        int t_id = dytList[i].T_id;
+                        ListItem li = new ListItem();
+                        li.Text = t_name;
+                        li.Value = t_id.ToString();
+                        ddl_pianChang.Items.Add(li);
+                        //ddl_Coming.Items.Add();
+
+                    }
                 }
-            }
            
+            }
+            //Session["name"] = "yyl01";
+          
 
             //for(int i=0;i<)
 
@@ -69,7 +74,7 @@ namespace ManageUI.PianChang
             int m_id = int.Parse(ddl_Coming.SelectedValue);
             string time = "";
             string day = m_time.Value.ToString();
-           
+            //Utility.JavaScript.Alert(t_id + ":" + m_id, this);
              
             string hour = txt_hour.Value.ToString();
             
@@ -82,7 +87,7 @@ namespace ManageUI.PianChang
             pc.P_time = dt;
             pc.P_price = money;
             if (BLL.PianChangManage.Insert_DianYingTing(pc))
-                Utility.JavaScript.Alert("添加成功",this);
+                Utility.JavaScript.Alert("添加成功", this);
             //Utility.JavaScript.Alert(time,this);
         }
 

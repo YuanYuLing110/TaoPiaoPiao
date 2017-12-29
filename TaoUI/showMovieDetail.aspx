@@ -116,9 +116,7 @@
                 	<li>
 					<label>选择时间</label>
 					<div class="select-tags" id="select_time" runat="server">
-													<a class="current" href="javascript:;" data-param="showId=211693&amp;date=2017-12-27&amp;n_s=new&amp;regionName=&amp;cinemaId=46017&amp;ts=1514368107967&amp;n_s=new">12月27日（今天）</a>
-                        							<a href="javascript:;" data-param="showId=211693&amp;date=2017-12-28&amp;n_s=new&amp;regionName=&amp;cinemaId=46017&amp;ts=1514368107967&amp;n_s=new">12月28日（周四）</a>
-                        							<a href="javascript:;" data-param="showId=211693&amp;date=2017-12-29&amp;n_s=new&amp;regionName=&amp;cinemaId=46017&amp;ts=1514368107967&amp;n_s=new">12月29日（周五）</a>
+											
                         					</div>
 				</li>
        <%--                         </ContentTemplate>
@@ -131,9 +129,13 @@
 	</div>
 	<!-- Cinema bar -->
 	<div class="center-wrap cinemabar-wrap">
-		<h4>广汉天智国际影城</h4>
-		地址：广汉市四川省德阳市广汉市南昌路四段43号 <a href="/cinemaDetail.htm?cinemaId=46017&amp;n_s=new#detail">[地图]</a>  电话：0838-5888331
-				<a class="more" href="/cinemaDetail.htm?cinemaId=46017&amp;n_s=new">查看影院详情&nbsp;&gt;</a>
+		<h4 ><asp:label ID="y_name" runat="server"></asp:label></h4>
+	<asp:Label ID="y_address" runat="server"></asp:Label>	
+        <%-- <a href="/cinemaDetail.htm?cinemaId=46017&amp;n_s=new#detail">[地图]</a>  --%>
+       <asp:HyperLink ID="hl"  runat="server">[地图]</asp:HyperLink>
+        <asp:Label ID="y_num" runat="server"></asp:Label>
+        <asp:HyperLink ID="y_detail" runat="server">查看影院详情&nbsp;&gt;</asp:HyperLink>
+			<%--	<a class="more" href="/cinemaDetail.htm?cinemaId=46017&amp;n_s=new"></a>--%>
 			</div>
 
 	<!-- Hall Tabel -->

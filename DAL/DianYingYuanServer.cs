@@ -123,6 +123,37 @@ namespace DAL
             return dyy;
         }
 
+        /// <summary>
+        ///根据电影院名查询电影详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static DianYingYuan search_DianYingYuan_name(string name)
+        {
+            //List<DianYingYuan> list = new List<DianYingYuan>();
+            string str = "select * from DianYingYuan where y_Name=@name";
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@name",name)
+                    };
+            DianYingYuan dyy = new DianYingYuan();
+            SqlDataReader sdr = DBHelper.ExecuteReader(str, CommandType.Text, p);
+            while (sdr.Read())
+            {
+
+                dyy.Y_id = int.Parse(sdr["y_id"].ToString());
+                dyy.Y_Name = sdr["y_Name"].ToString();
+                dyy.Y_address = sdr["y_address"].ToString();
+                dyy.Y_phone = sdr["y_phone"].ToString();
+                dyy.Y_provice = sdr["y_provice"].ToString();
+                dyy.Y_city = sdr["y_city"].ToString();
+                dyy.Y_area = sdr["y_area"].ToString();
+
+            }
+            sdr.Close();
+            return dyy;
+        }
+
 
         /// <summary>
         ///根据电影院评分排序查出当地的电影院

@@ -13,6 +13,7 @@ public partial class showMovieDetail : System.Web.UI.Page
     static string cinemaArea;
     static string cityName;
     static string provinceName;
+    static DianYingYuan dyy_current;
     static string dyyName;
     static bool evenExit = false;
     static string name_area;
@@ -20,9 +21,10 @@ public partial class showMovieDetail : System.Web.UI.Page
     static bool first = true;
     protected void Page_Load(object sender, EventArgs e)
     {
+        movieid = 44;
         //movieid =int.Parse( Request.QueryString["movieID"].ToString());
         #region 添加电影
-        movieid = 48;
+     
         Movie movie = BLL.MovieManage.search_Movie_byId(movieid);
         title.InnerText = movie.M_name;
         score.InnerText = movie.M_grade.ToString();
@@ -42,17 +44,7 @@ public partial class showMovieDetail : System.Web.UI.Page
         Session["city"] = "德阳市";
         #endregion
 
-        DateTime now = DateTime.Now;
-        DateTime after;
-        DateTime dt = Convert.ToDateTime(movie.M_time);
-        int num = now.Day - dt.Day;
-
-        for (int i = 0; i < num; i++)
-        {
-            after = now.AddDays(i);
-
-        }
-
+     
         #region 选择区域或电影院
         cityName = Session["city"].ToString();
 
@@ -72,6 +64,7 @@ public partial class showMovieDetail : System.Web.UI.Page
             List<DianYingYuan> listDYY = BLL.DianYingYuanManage.search_DianYingYuan_byGradeCityAll(cityName);
             if (Request.QueryString["dyyName"] == null)
             {
+                dyyName = listDYY[0].Y_Name;
                 foreach (DianYingYuan dyy in listDYY)
                     createDianYingYuan(dyy.Y_Name, listDYY[0].Y_Name);
             }
@@ -97,8 +90,9 @@ public partial class showMovieDetail : System.Web.UI.Page
 
             if (Request.QueryString["dyyName"] == null)
             {
+                dyyName = listDYY[0].Y_Name;
                 foreach (DianYingYuan dyy in listDYY)
-                    createDianYingYuan(dyy.Y_Name, listDYY[0].Y_Name);
+                    createDianYingYuan(dyy.Y_Name, dyyName);
             }
 
 
@@ -110,6 +104,73 @@ public partial class showMovieDetail : System.Web.UI.Page
             }
         }
         #endregion
+
+        #region  添加时间
+        DateTime now = DateTime.Now;
+        DateTime after;
+        DateTime dt = Convert.ToDateTime(movie.M_time);
+
+        DateTime d3 = Convert.ToDateTime(string.Format("{0}-{1}-{2}", now.Year, now.Month, now.Day));
+
+        DateTime d4 = Convert.ToDateTime(string.Format("{0}-{1}-{2}", dt.Year, dt.Month, dt.Day));
+
+        int days = (d4 - d3).Days;
+        if (Request.QueryString["date"] == null)
+        {
+            if (days <= 0)
+            {
+                for (int i = 0; i < 5 + days; i++)
+                {
+                    after = now.AddDays(i);
+                    createDays(after, i, now);
+
+                }
+            }
+
+            if (days > 0)
+            {
+                for (int i = 1; i < 5 - days; i++)
+                {
+                    after = now.AddDays(i);
+                    createDays(after, i, now.AddDays(1));
+
+                }
+
+            }
+        }
+        else
+        {
+            DateTime bjDate = Convert.ToDateTime(Request.QueryString["date"]);
+            if (days <= 0)
+            {
+                for (int i = 0; i < 5 + days; i++)
+                {
+                    after = now.AddDays(i);
+                    createDays(after, i, bjDate);
+
+                }
+            }
+
+            if (days > 0)
+            {
+                for (int i = 1; i < 5 - days; i++)
+                {
+                    after = now.AddDays(i);
+                    createDays(after, i, bjDate);
+
+                }
+
+            }
+
+        }
+
+        #endregion
+
+        dyy_current = BLL.DianYingYuanManage.search_DianYingYuan_name(dyyName);
+        y_name.Text = dyy_current.Y_Name;
+        y_address.Text = dyy_current.Y_address;
+        y_num.Text = dyy_current.Y_phone;
+
     }
 
     void createArea(string area, string str)
@@ -124,36 +185,7 @@ public partial class showMovieDetail : System.Web.UI.Page
 
     }
 
-    private void btn_Command(object sender, CommandEventArgs e)
-    {
-        // Button btn2=(Button)select_tags.FindControl("dq");
-        // Button tj = new Button();    
-        // tj.Command += btn_Command;
-        // tj.Text = btn2.Text;
-        // tj.CssClass = "btnBefore";
-        //int m= select_tags.Controls.IndexOf(btn2);
-        ////
-        //select_tags.Controls.RemoveAt(m);
-        //select_tags.Controls.AddAt(m, tj);
-        // Button btn = (Button)sender;
-
-        // Button tj2 = new Button();
-        // tj2.Command += btn_Command;
-        // tj2.Text = btn.Text;
-        // tj2.CssClass = "current2";
-        // //select_tags.Controls.RemoveAt(1);
-        Button btn = (Button)sender;
-        btn.CssClass = "current2";
-        // tj2.ID = "dq";
-        // int n = select_tags.Controls.IndexOf(btn);
-        // select_tags.Controls.RemoveAt(n);
-        // select_tags.Controls.AddAt(n, tj);
-    }
-
-    private void btn_Command2(object sender, CommandEventArgs e)
-    {
-
-    }
+   
 
     void createDianYingYuan(string area, string xz)
     {
@@ -165,22 +197,30 @@ public partial class showMovieDetail : System.Web.UI.Page
         select_dyy.Controls.Add(a);
     }
 
-    void createDays(DateTime dt, string date)
+    void createDays(DateTime dt,int n,DateTime bj)
     {
+        string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
+        string week = Day[Convert.ToInt32(dt.DayOfWeek.ToString("d"))].ToString();
+        //Utility.JavaScript.Alert(dt.Date.ToShortDateString(),this);
 
-        Button btn = new Button();
-        btn.Command += btn_Command;
-        string time = dt.Month + "月" + dt.Day + '日';
-        btn.Text = time;
-        //btn.BackColor = Transparent;
-        if (time.Equals(date))
-            btn.CssClass = "current2";
-        else
-            btn.CssClass = "btnBefore";
+        HtmlGenericControl a = new HtmlGenericControl("a");
+        a.Attributes.Add("href", "showMovieDetail.aspx?cinemaArea=" + cinemaArea + "&dyyName=" + dyyName + "&date=" + dt.Date.ToShortDateString());
+           string time="" ;
+           if (n == 0)
+           {
+               time = dt.Month + "月" + dt.Day + '日' + "(今天)";
+           }
+           else
+               time = dt.Month + "月" + dt.Day+"("+week+")";
+    
+        a.InnerText =time;
 
-        btn.BorderColor = System.Drawing.Color.Transparent;
-        btn.BorderStyle = System.Web.UI.WebControls.BorderStyle.None;
-        select_time.Controls.Add(btn);
+        if ((dt.Date.ToShortDateString()).Equals(bj.Date.ToShortDateString()))
+        {
+            a.Attributes.Add("class", "current");
+        }
+
+        select_time.Controls.Add(a);
 
     }
 }

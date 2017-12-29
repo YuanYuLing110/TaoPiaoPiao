@@ -36,7 +36,7 @@ namespace ManageUI
                 Session["limit"] = "super";
                     Response.Redirect("~/Index.aspx");
             }
-            else if (BLL.Manage_Manager.PanDuan_CommonManage(name, pwd))
+            else if (BLL.Manage_Manager.PanDuan_CommonManage(name, pass))
             {
                 Session["name"] = name;
                 Session["limit"] = "commit";

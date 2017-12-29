@@ -41,7 +41,7 @@
       
       <div id="profile-links"> 你好,   <asp:LinkButton runat="server" ID="name" OnClick="name_Click"></asp:LinkButton>,<asp:Label runat="server" ID="manage"></asp:Label>  管理者<br />
         <br />
-        <a href="#" title="View the Site">编辑</a> | <a href="#" title="Sign Out">退出</a> </div>
+        <a href="#" title="View the Site">编辑</a> | <a href="login.aspx" title="Sign Out">退出</a> </div>
       <ul id="main-nav">
         <!-- Accordion Menu -->
         <li> <a href="main.htm"  target="main" class="SY current main-item " >
@@ -80,8 +80,8 @@
             <li runat="server" id="Li_Manager"> 
                 <a href="#" class="nav-top-item main-item"> 电影院管理员管理 </a>
           <ul>
-            <li><a href="#" target="main" class="lili">添加管理员</a></li>
-            <li><a href="#" target="main" class="lili">编辑管理员</a></li>
+         <%--   <li><a href="#" target="main" class="lili">添加管理员</a></li>--%>
+            <li><a href="SuperManage/ManageFrm.aspx" target="main" class="lili">编辑管理员</a></li>
           
           </ul>
         </li>

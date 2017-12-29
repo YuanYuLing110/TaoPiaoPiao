@@ -18,58 +18,62 @@ namespace ManageUI.PianChang
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Session["name"] = "yyl02";
+            UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+
+            string name = Session["name"].ToString();
+            y_id = BLL.DianYingYuanManage.search_DianYingYuanId_byM_name(name);
+            if(!IsPostBack)
+            {
+                if (Object.Equals(Session["name"], null))
+                {//判断在Session["AdminName"]是否存在值
+                    Utility.JavaScript.AlertAndRedirect("请登录", "..//login.aspx", this);
+                }
+                else
+                {
+                  
 
 
-            Session["name"] = "yyl01";
-              if (Object.Equals(Session["name"], null))
-              {//判断在Session["AdminName"]是否存在值
-                  Utility.JavaScript.AlertAndRedirect("请登录", "..//login.aspx", this);
-              }
-              else
-              {
-                  UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-                 
-                  string name = Session["name"].ToString();
-                  y_id = BLL.DianYingYuanManage.search_DianYingYuanId_byM_name(name);
-                 
+                    if (!IsPostBack)
+                    {
+                        //sr = BLL.MovieManage.search_NewMovie_byDate_sr("2017/12/18");
+                        sr = BLL.PianChangManage.search_pianChang_All_sr(y_id);
+                        dt = new DataTable();
+                        dt.Load(sr);
+                        Application["dt"] = dt;
+                        InitGridView();
+                        //ddl_movie.Items.Clear();
+                        List<Model.Movie> comingList = BLL.MovieManage.searchHotMovieAll();
+                        //ddl_Coming.
+                        for (int i = 0; i < comingList.Count; i++)
+                        {
+                            string m_name = comingList[i].M_name.ToString();
+                            int m_id = comingList[i].M_id;
+                            ListItem li = new ListItem();
+                            li.Text = m_name;
+                            li.Value = m_id.ToString();
+                            ddl_movie.Items.Add(li);
+                            //ddl_Coming.Items.Add();
 
-                  if (!IsPostBack)
-                  { 
-                  //sr = BLL.MovieManage.search_NewMovie_byDate_sr("2017/12/18");
-                      sr = BLL.PianChangManage.search_pianChang_All_sr(y_id);
-                      dt = new DataTable();
-                      dt.Load(sr);
-                      Application["dt"] = dt;
-                      InitGridView();
-                  //ddl_movie.Items.Clear();
-                  List<Model.Movie> comingList = BLL.MovieManage.searchHotMovieAll();
-                  //ddl_Coming.
-                  for (int i = 0; i < comingList.Count; i++)
-                  {
-                      string m_name = comingList[i].M_name.ToString();
-                      int m_id = comingList[i].M_id;
-                      ListItem li = new ListItem();
-                      li.Text = m_name;
-                      li.Value = m_id.ToString();
-                      ddl_movie.Items.Add(li);
-                      //ddl_Coming.Items.Add();
+                        }
 
-                  }
+                        //ddl_dyt.Items.Clear();
+                        List<Model.DianYingTing> dytList = BLL.DianYingTingManage.search_DianYingTing(name);
 
-                  //ddl_dyt.Items.Clear();
-                  List<Model.DianYingTing> dytList = BLL.DianYingTingManage.search_DianYingTing(name);
+                        for (int i = 0; i < dytList.Count; i++)
+                        {
+                            string t_name = dytList[i].T_name.ToString();
+                            int t_id = dytList[i].T_id;
+                            ListItem li = new ListItem();
+                            li.Text = t_name;
+                            li.Value = t_id.ToString();
+                            ddl_dyt.Items.Add(li);
+                            //ddl_Coming.Items.Add();
 
-                  for (int i = 0; i < dytList.Count; i++)
-                  {
-                      string t_name = dytList[i].T_name.ToString();
-                      int t_id = dytList[i].T_id;
-                      ListItem li = new ListItem();
-                      li.Text = t_name;
-                      li.Value = t_id.ToString();
-                      ddl_dyt.Items.Add(li);
-                      //ddl_Coming.Items.Add();
-
-                  }
+                        }
+            }
+            //Session["name"] = "yyl01";
+             
 
                  
                  
@@ -131,7 +135,8 @@ namespace ManageUI.PianChang
             //ddl_movie.Items.Clear();
             //ddl_dyt.Items.Clear();
             int m_id = int.Parse(ddl_movie.SelectedValue.ToString());
-            //Utility.JavaScript.Alert(m_id.ToString(), this);
+
+            //Utility.JavaScript.Alert(m_id + ":" + y_id, this);
             sr = BLL.PianChangManage.search_pianChang_byMovie_sr(m_id,y_id);
             dt = new DataTable();
             dt.Load(sr);
