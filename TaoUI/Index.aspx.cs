@@ -28,11 +28,15 @@ public partial class Default2 : System.Web.UI.Page
         movie_post.Style.Add("display","none");
         List<Movie> movieListHot = BLL.MovieManage.searchHotMovie();
 
-        foreach (Movie m in movieListHot)
-        {
-            create_MovieHot(m);
-        }
+        //foreach (Movie m in movieListHot)
+        //{
+           
+        //}
 
+        for (int i = 0; i < movieListHot.Count-1; i++)
+        {
+            create_MovieHot(movieListHot[i]);
+        }
 
         List<Movie> movieListPF = BLL.MovieManage.search_Movie_byCountFive();
         foreach (Movie m in movieListPF)
