@@ -46,6 +46,7 @@
     <Compile Include="DianYingTingServer.cs" />
     <Compile Include="DianYingYuanServer.cs" />
     <Compile Include="ManageServer.cs" />
+    <Compile Include="MoviePianChang_Server.cs" />
     <Compile Include="MovieServer.cs" />
     <Compile Include="PianChangServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

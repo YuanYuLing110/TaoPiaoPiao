@@ -146,15 +146,14 @@
 				    <th class="hall-time">放映时间</th>
 				    <th class="hall-type">语言版本</th>
 				    <th class="hall-name">放映厅</th>
-				    <th class="hall-flow">座位情况</th>
 				    <th class="hall-price">现价/影院价（元）</th>
 				    <th class="hall-buy">选座购票</th>
 				</tr>
 			</thead>
-			<tbody>
-				
-									
-				  <tr>
+			<tbody id="t_body" runat="server">
+			
+										
+				<%--  <tr>
 					<td class="hall-time">
 						<em class="bold">18:00</em>
 						 预计20:16散场 					</td>
@@ -165,18 +164,7 @@
 						2号激光厅
 					</td>
 										
-					<td class="hall-flow">
-						<div class="flowing-wrap flowing-loose">
-							<label> 宽松  </label>
-							<span class="flowing-vol"><i style="width: 0%;"></i></span>
-							<span class="flowing-view J_flowingView" data-scheduleid="477479593">
-								    								<i class="icon-zoom"></i>
-    								<div class="view-wrap" style="display: none;">
-    									<div class="view-box">加载中...</div>
-    								</div>
-															</span>
-						</div>
-					</td>
+					
 										<td class="hall-price" data-partcode="dingxinnew">
 						<em class="now">28.00</em>
 						<del class="old">60.00</del>
@@ -197,18 +185,7 @@
 						4号激光厅
 					</td>
 										
-					<td class="hall-flow">
-						<div class="flowing-wrap flowing-loose">
-							<label> 宽松  </label>
-							<span class="flowing-vol"><i style="width: 0%;"></i></span>
-							<span class="flowing-view J_flowingView" data-scheduleid="477479592">
-								    								<i class="icon-zoom"></i>
-    								<div class="view-wrap" style="display: none;">
-    									<div class="view-box">加载中...</div>
-    								</div>
-															</span>
-						</div>
-					</td>
+					
 										<td class="hall-price" data-partcode="dingxinnew">
 						<em class="now">28.00</em>
 						<del class="old">60.00</del>
@@ -229,18 +206,7 @@
 						2号激光厅
 					</td>
 										
-					<td class="hall-flow">
-						<div class="flowing-wrap flowing-loose">
-							<label> 宽松  </label>
-							<span class="flowing-vol"><i style="width: 0%;"></i></span>
-							<span class="flowing-view J_flowingView" data-scheduleid="477479591">
-								    								<i class="icon-zoom"></i>
-    								<div class="view-wrap" style="display: none;">
-    									<div class="view-box">加载中...</div>
-    								</div>
-															</span>
-						</div>
-					</td>
+					
 										<td class="hall-price" data-partcode="dingxinnew">
 						<em class="now">28.00</em>
 						<del class="old">60.00</del>
@@ -248,7 +214,7 @@
 					<td class="hall-seat">
 													<a class="seat-btn" href="https://www.taopiaopiao.com/seatOrder.htm?scheduleId=477479591&amp;n_s=new">选座购票</a>
 											</td>
-				</tr>
+				</tr>--%>
 							</tbody>	
 		</table>
 			</div>

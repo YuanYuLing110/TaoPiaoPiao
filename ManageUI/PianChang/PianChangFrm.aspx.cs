@@ -18,7 +18,7 @@ namespace ManageUI.PianChang
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Session["name"] = "yyl02";
+            //Session["name"] = "yyl02";
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
             string name = Session["name"].ToString();
