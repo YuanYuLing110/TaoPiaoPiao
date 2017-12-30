@@ -16,14 +16,14 @@ public partial class showMovieDetail : System.Web.UI.Page
     static DianYingYuan dyy_current;
     static DateTime bjDate;
     static string dyyName;
-    static string name_area;
+    //static string name_area;
 
-    static string name_dyy;
+    //static string name_dyy;
     static bool pdEven = false;
     protected void Page_Load(object sender, EventArgs e)
     {
-        movieid = 21;
-        //movieid =int.Parse( Request.QueryString["movieID"].ToString());
+        //movieid = 21;
+        movieid = int.Parse(Request.QueryString["movieid"].ToString());
         #region 添加电影
      
         Movie movie = BLL.MovieManage.search_Movie_byId(movieid);
@@ -193,7 +193,7 @@ public partial class showMovieDetail : System.Web.UI.Page
         a.InnerText = area;
         if (area.Equals(str))
             a.Attributes.Add("class", "current");
-        a.Attributes.Add("href", "showMovieDetail.aspx?cinemaArea=" + area);
+        a.Attributes.Add("href", "showMovieDetail.aspx?movieid="+movieid+"&cinemaArea=" + area);
 
         select_tags.Controls.Add(a);
 
@@ -207,7 +207,7 @@ public partial class showMovieDetail : System.Web.UI.Page
         a.InnerText = area;
         if (area.Equals(xz))
             a.Attributes.Add("class", "current");
-        a.Attributes.Add("href", "showMovieDetail.aspx?cinemaArea=" + cinemaArea + "&dyyName=" + area);
+        a.Attributes.Add("href", "showMovieDetail.aspx?movieid=" + movieid + "&cinemaArea=" + cinemaArea + "&dyyName=" + area);
         select_dyy.Controls.Add(a);
     }
 
@@ -218,7 +218,7 @@ public partial class showMovieDetail : System.Web.UI.Page
         //Utility.JavaScript.Alert(dt.Date.ToShortDateString(),this);
 
         HtmlGenericControl a = new HtmlGenericControl("a");
-        a.Attributes.Add("href", "showMovieDetail.aspx?cinemaArea=" + cinemaArea + "&dyyName=" + dyyName + "&date=" + dt.Date.ToShortDateString());
+        a.Attributes.Add("href", "showMovieDetail.aspx?movieid=" + movieid + "&cinemaArea=" + cinemaArea + "&dyyName=" + dyyName + "&date=" + dt.Date.ToShortDateString());
            string time="" ;
            if (n == 0)
            {

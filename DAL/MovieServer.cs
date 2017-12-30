@@ -38,6 +38,23 @@ namespace DAL
         }
 
         /// <summary>
+        /// 根据电影院名查询电影院id
+        /// </summary>
+        /// <param name="st"></param>
+        /// <returns></returns>
+
+        public static int search_MovieId_byM_name(string st)
+        {
+            string str = "select m_id from Movie where m_name=@name";
+            SqlParameter[] p = {
+             
+                new SqlParameter("@name",st)
+                    };
+            object i = DBHelper.ExecuteScalar(str, CommandType.Text, p);
+            return (int)i;
+        }
+
+        /// <summary>
         ///根据票房查询前一周前五的电影
         /// </summary>
         public static List<Movie> search_Movie_byCountFive()
@@ -144,6 +161,45 @@ namespace DAL
                     list.Add(movie);
                 }
          
+            sdr.Close();
+            return list;
+        }
+
+
+        /// <summary>
+        ///根据电影院id查询安排片场的电影
+        /// </summary>
+        public static List<Movie> search_Movie_byY_ID(int y_id)
+        {
+
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@y_id",y_id)
+                    };
+            List<Movie> list = new List<Movie>();
+            SqlDataReader sdr = DBHelper.ExecuteReader("search_Movie_byY_ID", CommandType.StoredProcedure, p);
+
+            while (sdr.Read())
+            {
+                Movie movie = new Movie();
+                movie.M_id = int.Parse(sdr["m_id"].ToString());
+                movie.M_name = sdr["m_Name"].ToString();
+                movie.M_image = (byte[])sdr["m_image"];
+                movie.M_direct = sdr["m_direct"].ToString();
+                movie.M_star = sdr["m_star"].ToString();
+                movie.M_type = sdr["m_type"].ToString();
+                movie.M_state = sdr["m_state"].ToString();
+                movie.M_voice = sdr["m_voice"].ToString();
+                movie.M_state = sdr["m_state"].ToString();
+                movie.M_voice = sdr["m_voice"].ToString();
+                movie.M_time = sdr["m_time"].ToString();
+                movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
+                movie.M_detail = sdr["m_detail"].ToString();
+                movie.M_count = int.Parse(sdr["m_count"].ToString());
+                movie.M_minute = int.Parse(sdr["m_minute"].ToString());
+                list.Add(movie);
+            }
+
             sdr.Close();
             return list;
         }

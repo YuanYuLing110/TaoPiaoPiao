@@ -21,10 +21,17 @@ namespace BLL
            return DAL.MovieServer.InsertMovie(movie);
        }
 
-        /// <summary>
-    
-
+       
          /// <summary>
+        /// 根据电影院名查询电影院id
+        /// </summary>
+        /// <param name="st"></param>
+        /// <returns></returns>
+
+       public static int search_MovieId_byM_name(string st)
+       {
+        return   DAL.MovieServer.search_MovieId_byM_name(st);
+       }
         ///根据票房查询前一周前五的电影
         /// </summary>
        public static List<Movie> search_Movie_byCountFive()
@@ -38,6 +45,14 @@ namespace BLL
        /// </summary>
        public static Movie search_Movie_byId(int id) {
            return DAL.MovieServer.search_Movie_byId(id);
+       }
+
+        /// <summary>
+        ///根据电影院id查询安排片场的电影
+        /// </summary>
+       public static List<Movie> search_Movie_byY_ID(int y_id)
+       {
+           return DAL.MovieServer.search_Movie_byY_ID(y_id);
        }
 
         /// <summary>

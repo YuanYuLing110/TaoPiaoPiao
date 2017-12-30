@@ -111,6 +111,7 @@ namespace DAL
             {
                 
                 dyy.Y_id = int.Parse(sdr["y_id"].ToString());
+                dyy.Y_grade = int.Parse(sdr["y_grade"].ToString());
                 dyy.Y_Name = sdr["y_Name"].ToString();
                 dyy.Y_address = sdr["y_address"].ToString();
                 dyy.Y_phone = sdr["y_phone"].ToString();
