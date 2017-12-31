@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChoiceServer.cs" />
     <Compile Include="CityServer.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="DianYingTingServer.cs" />

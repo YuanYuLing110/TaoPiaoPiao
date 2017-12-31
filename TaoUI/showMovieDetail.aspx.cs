@@ -22,8 +22,8 @@ public partial class showMovieDetail : System.Web.UI.Page
     static bool pdEven = false;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //movieid = 21;
-        movieid = int.Parse(Request.QueryString["movieid"].ToString());
+        movieid = 21;
+        //movieid = int.Parse(Request.QueryString["movieid"].ToString());
         #region 添加电影
      
         Movie movie = BLL.MovieManage.search_Movie_byId(movieid);

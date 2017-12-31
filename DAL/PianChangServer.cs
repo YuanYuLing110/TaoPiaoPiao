@@ -85,5 +85,99 @@ namespace DAL
         
         }
 
+        public static PianChang search_pianChang_byP_id(int p_id)
+        {
+            string str = "select * from PianChang where p_id=@id";
+            SqlParameter[] p = {
+             
+                   
+                         new SqlParameter("@id",p_id)
+                    };
+            SqlDataReader sr = DBHelper.ExecuteReader(str,CommandType.Text,p);
+            PianChang pc = new PianChang();
+            if (sr.Read())
+            {
+                pc.P_price =Convert.ToDouble( sr["p_price"]);
+                pc.P_time =Convert.ToDateTime( sr["p_time"]);
+             
+            }
+            sr.Close();
+            return pc;
+
+        }
+
+        /// <summary>
+        ///根据片场id查询电影
+        /// </summary>
+        public static Movie search_Movie_byP_id(int p_id)
+        {
+
+            string str = " select * from Movie where m_id=(select m_id from PianChang where p_id=@id)";
+            SqlParameter[] p = {
+             
+                        new SqlParameter("@id",p_id)
+                    };
+            SqlDataReader sdr = DBHelper.ExecuteReader(str, CommandType.Text, p);
+            Movie movie = new Movie();
+
+            if (sdr.Read())
+            {
+
+
+                movie.M_id = int.Parse(sdr["m_id"].ToString());
+                movie.M_name = sdr["m_Name"].ToString();
+                movie.M_image = (byte[])sdr["m_image"];
+                movie.M_direct = sdr["m_direct"].ToString();
+                movie.M_star = sdr["m_star"].ToString();
+                movie.M_type = sdr["m_type"].ToString();
+                movie.M_state = sdr["m_state"].ToString();
+                movie.M_voice = sdr["m_voice"].ToString();
+                movie.M_state = sdr["m_state"].ToString();
+                movie.M_voice = sdr["m_voice"].ToString();
+                movie.M_time = sdr["m_time"].ToString();
+                movie.M_grade = Convert.ToSingle(sdr["m_grade"]);
+                movie.M_detail = sdr["m_detail"].ToString();
+                movie.M_count = int.Parse(sdr["m_count"].ToString());
+                movie.M_minute = int.Parse(sdr["m_minute"].ToString());
+
+            }
+            sdr.Close();
+            return movie;
+        }
+
+        public static DianYingTing search_DianYingTing_byP_id(int p_id)
+        {
+
+            string str = " select * from DianYingTing where t_id=(select t_id from PianChang where p_id=@id)";
+            SqlParameter[] p = {
+             
+                   
+                         new SqlParameter("@id",p_id)
+                    };
+            SqlDataReader sr = DBHelper.ExecuteReader(str, CommandType.Text, p);
+            DianYingTing dyt = new DianYingTing();
+            if (sr.Read())
+            {
+                dyt.T_name = sr["t_name"].ToString();
+                dyt.T_line = Convert.ToInt32(sr["t_line"]);
+                dyt.T_row = Convert.ToInt32(sr["t_row"]);
+                dyt.T_count = Convert.ToInt32(sr["t_count"]);
+            }
+            sr.Close();
+            return dyt;
+        
+        }
+
+        public static string search_DianYingYuanName_byP_id(int p_id)
+        {
+            string str = " select y_Name from DianYingYuan where y_id=(select y_id from DianYingTing where t_id=(select t_id from PianChang where p_id=@id))";
+            SqlParameter[] p = {
+             
+                   
+                         new SqlParameter("@id",p_id)
+                    };
+            object obj = DBHelper.ExecuteScalar(str,CommandType.Text,p);
+            return obj.ToString();
+        }
     }
 }

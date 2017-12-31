@@ -13,6 +13,13 @@ namespace Model //修改名字空间
 			set { c_id = value; }
 		}
 	
+		private int p_id;
+		public int P_id
+		{
+			get { return p_id; }
+			set { p_id = value; }
+		}
+	
 		private int u_id;
 		public int U_id
 		{
@@ -20,11 +27,18 @@ namespace Model //修改名字空间
 			set { u_id = value; }
 		}
 	
-		private int s_id;
-		public int S_id
+		private string c_orderNum;
+		public string C_orderNum
 		{
-			get { return s_id; }
-			set { s_id = value; }
+			get { return c_orderNum; }
+			set { c_orderNum = value; }
+		}
+	
+		private string c_name;
+		public string C_name
+		{
+			get { return c_name; }
+			set { c_name = value; }
 		}
 	
 		private DateTime c_time;
